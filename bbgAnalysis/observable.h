@@ -20,8 +20,8 @@
 #include <TStyle.h>
 #include <TCanvas.h>
 #include <TGraphErrors.h>
-#include "../style/Style.C"
-#include "../style/Labels.C"
+#include "../../style/Style.C"
+#include "../../style/Labels.C"
 #include "TSystemFile.h"
 #include "TLorentzVector.h"
 
@@ -266,13 +266,10 @@ public :
    virtual void     Init(TTree *tree);
 
    //analysis
-   virtual void     AnalysisR3(int n=-1, bool inclusive=false);
    virtual void     AnalysisR3_cambridge(int n=-1);
-   virtual void     AnalysisR3_y23(int n=-1);
    virtual void     Efficiencies(int n=-1);
-   virtual void     matching(int n=-1);
-   virtual void     AnalysisY23(int n=-1);
 
+   
 
    //preselection and charge measurement and correction
    virtual bool     PreSelection(int type=0, float egamma=25);
@@ -324,13 +321,6 @@ public :
      std::vector< float > d1= getDirection(vectorPoint);
      costheta1 =  std::cos( getAngles(d1).at(1) );
      return costheta1;
-   }
-
-   float GetCosphi(std::vector<float> & vectorPoint){
-    float cosphi= -2.0;
-    std::vector<float> d1 = getDirection(vectorPoint);
-    cosphi = std::cos(getAngles(d1).at(0));
-    return cosphi;
    }
 
    float GetSinacol(TVector3 v1, TVector3 v2){
