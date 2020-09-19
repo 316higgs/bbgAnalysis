@@ -46,7 +46,6 @@ namespace QQbarProcessor
     bool_bbbar[0]=false; //default is false
     bool_bbbar[1]=false; //default is false
 
-    std::cout << "=== MC Particle chain ===" << std::endl;
     for (int i=0; i<number; i++) {
       //Act getElementAt() to ith element of myCollection and Extract MCParticle class objects
       MCParticle* particle = dynamic_cast<MCParticle*>(myCollection->getElementAt(i));
@@ -97,138 +96,30 @@ namespace QQbarProcessor
   }
 
 
+
   //Added by Seidai in 2020.Sep.16
   vector<MCParticle*> QQbarMCOperator::GetBBbarHadrons() {
     std::cout << "##################################" << std::endl;
     std::cout << "##         Hadron level         ##" << std::endl;
     std::cout << "##################################" << std::endl;
 
-    vector<MCParticle*> stable_hadrons;
-
     int number = myCollection -> getNumberOfElements();
+    vector<MCParticle*> stable_hadrons;
     if(number<3) return stable_hadrons; //return empty
-
-    //std::cout << "=== MC Particle chain ===" << std::endl;
-    //std::cout << "  decay_particles size:" << decay_particles.size() << std::endl;
+    
     for(int i=0; i<number; i++) {
-      vector<MCParticle*> second_daughters;
-      vector<MCParticle*> third_daughters;
-      vector<MCParticle*> next_daughters;
-
       MCParticle* particle = dynamic_cast<MCParticle*>(myCollection->getElementAt(i));
 
-      if(particle->getPDG()==91 || particle->getPDG()==92) {
-        //1st generation particle -> 2nd generation particles
-        vector<MCParticle*> first_daughters = particle->getDaughters();
-
-        //1st loop
-        for(int i=0; i<first_daughters.size(); i++) {
-
-          std::cout << "### 1st generation [" << i+1 << "]" << std::endl;
-
-          int empty_checker;
-          //1st generation particle -> 2nd generation particles
-          if(second_daughters.size()==0) second_daughters = first_daughters.at(i)->getDaughters();
-
-          bool decay = false;
-          while(decay==false) {
-            std::cout << "   === Decay chain start ===" << std::endl;
-            empty_checker = 0; 
-            if(empty_checker==0) std::cout << "! empty checker initialized." << std::endl;
-
-            //2nd loop
-            for(int j=0; j<second_daughters.size(); j++) {
- 
-              //2nd generation particle -> 3rd generation particles
-              third_daughters = second_daughters.at(j)->getDaughters();
-              //3rd generation particles for each 2nd generation particles
-              std::cout << "   -> ### 2nd generation particle:" << second_daughters.at(j)->getPDG() << std::endl;
-              for(int k=0; k<third_daughters.size(); k++) {
-                std::cout << "      -> ### 3rd generation [" << k+1 << "]  particle:" << third_daughters.at(k)->getPDG() << std::endl;
-              }
-              
-              if(third_daughters.size()==0) {
-                empty_checker += 0;
-                //register 2nd generation particle to stable hadrons
-                stable_hadrons.push_back(second_daughters.at(j));
-              }
-
-              else if(third_daughters.size()!=0) {
-                empty_checker += 1;
-                //Add (non-empty) 3rd generation particles
-                //next_daughters should be role 2nd generation for the next loop
-                for(int k=0; k<third_daughters.size(); k++) {
-                  next_daughters.push_back(third_daughters.at(k));
-                }
-              }
-              
-            }//2nd loop
-
-            std::cout << "   empty check: " << empty_checker;
-            if(empty_checker==0) {
-              decay = true;
-              std::cout << " ---> decay stopped at 2nd generation." << std::endl;
-
-              //2nd generation clean up for the next 1st loop
-              for(int k=0; k<second_daughters.size(); k++) {
-                //second_daughters.at(k)=0;
-                second_daughters.erase(second_daughters.begin(), second_daughters.end());
-              }
-              if(second_daughters.size()==0) std::cout << "! 2nd generation clean up" << std::endl;
-              //break; //return to 1st loop
-            }
-
-            else {
-              decay = false;
-              std::cout << " ---> decay continue..." << std::endl;
-
-              //remained next decay particles we should think at the next
-              std::cout << "" << std::endl;
-              std::cout << "   ### Next decay particle list ###" << std::endl;
-              for(int k=0; k<next_daughters.size(); k++) {
-                std::cout << "   [" << k+1 << "]  particle:" << next_daughters.at(k)->getPDG() << std::endl;
-              }
-            }
-
-            
-            //preparation for next step
-            if(empty_checker!=0) {
-              //2nd generation clean up for replacement
-              for(int k=0; k<second_daughters.size(); k++) {
-                //second_daughters.at(k)=0;
-                second_daughters.erase(second_daughters.begin(), second_daughters.end());
-              }
-              if(second_daughters.size()==0) {
-                std::cout << "! 2nd generation clean up" << std::endl;
-              }
-
-              //replacement
-              std::cout << "! Replacement";
-              for(int k=0; k<next_daughters.size(); k++) {
-                second_daughters.push_back(next_daughters.at(k));
-                //std::cout << " [" << k+1 << "]  particle:" << second_daughters.at(k)->getPDG() << std::endl;
-              }
-              if(second_daughters.size()==next_daughters.size()) std::cout << " : succeed safety." << std::endl;
-              else std::cout << " : failed." << std::endl;
-
-              //next_daughter refresh
-              for(int k=0; k<next_daughters.size(); k++) {
-                //next_daughters.at(k)=0;
-                next_daughters.erase(next_daughters.begin(), next_daughters.end());
-              }
-              if(next_daughters.size()==0) {
-                std::cout << "! decay particle list refreshed" << std::endl;
-              }
-            }
-          }//while
-          std::cout << "! return to 1st generation loop." << std::endl;
-          std::cout << "" << std::endl;
-
-        }//1st loop
-
+      vector<MCParticle*> daughters = particle->getDaughters();
+      if(daughters.size()==0) {
+        stable_hadrons.push_back(particle);
       }
+    }
 
-    }// MCParticle loop
+    std::cout << "### stable_hadrons ###" << std::endl;
+    for(int i=0; i<stable_hadrons.size(); i++) {
+      std::cout << "[" << i << "]  Stable particle: " << stable_hadrons.at(i)->getPDG() << std::endl;
+    }
     return stable_hadrons;
   }//GetBBbarHadrons()
 
