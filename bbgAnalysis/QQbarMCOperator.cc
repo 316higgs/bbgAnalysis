@@ -122,13 +122,13 @@ namespace QQbarProcessor
         vector<MCParticle*> first_daughters = particle->getDaughters();
 
         //1st loop
-        for(int i=0; i<first_daughters.size(); i++) {
+        for(int d=0; d<first_daughters.size(); d++) {
 
-          std::cout << "### 1st generation [" << i+1 << "]" << std::endl;
+          std::cout << "### 1st generation [" << d+1 << "]" << std::endl;
 
           int empty_checker;
           //1st generation particle -> 2nd generation particles
-          if(second_daughters.size()==0) second_daughters = first_daughters.at(i)->getDaughters();
+          if(second_daughters.size()==0) second_daughters = first_daughters.at(d)->getDaughters();
 
           bool decay = false;
           while(decay==false) {
