@@ -18,10 +18,10 @@ namespace QQbarProcessor
   void BBbarAnalysis::Init(std::string _hfilename) 
   { 
 
-
     TreeWriter writer;
     _hfile = new TFile( _hfilename.c_str(), "RECREATE", _hfilename.c_str() ) ;
     _hTree = new TTree( "Stats", "tree" );
+    //See src/TreeWriter.cc line:24-
     writer.InitializeStatsBBbarTree(_hTree, _stats);
     
   }
@@ -121,7 +121,7 @@ namespace QQbarProcessor
 	        _stats._mc_quark_ps_pz[i]=bbbar_ps.at(i)->getMomentum()[2];
 	        _stats._mc_quark_ps_pdg[i]=bbbar_ps.at(i)->getPDG();
 	        if(bbbar_ps.at(i)->getPDG()==5) quark_idx[0]=i;
-            if(bbbar_ps.at(i)->getPDG()==-5) quark_idx[1]=i;    
+          if(bbbar_ps.at(i)->getPDG()==-5) quark_idx[1]=i;    
 	        _stats._mc_quark_ps_charge[i]=bbbar_ps.at(i)->getCharge();
 	        _stats._mc_quark_ps_m[i]=bbbar_ps.at(i)->getMass();
 	        _stats._mc_quark_ps_pt[i]=std::sqrt( std::pow(bbbar_ps.at(i)->getMomentum()[0],2) + std::pow(bbbar_ps.at(i)->getMomentum()[1],2) );
@@ -243,6 +243,7 @@ namespace QQbarProcessor
   void BBbarAnalysis::AnalyseGeneratorBBbar_Hadron(QQbarMCOperator& opera, float _Rparam_jet_ps, float _pparam_jet_ps) {
   	vector<PseudoJet> particles;
   	JetDefinition jet_def(ee_genkt_algorithm, _Rparam_jet_ps, _pparam_jet_ps);
+    int error=0;
 
     //Obtain particles which are appeared after intermediate particle
   	vector<MCParticle*> bbbar_hadron = opera.GetBBbarHadrons();
@@ -250,20 +251,23 @@ namespace QQbarProcessor
 
   	for(int i=0; i<bbbar_hadron.size(); i++) {
   		if(bbbar_hadron.at(i)!=NULL) {
+        //They are filled at line:587
   			_stats._mc_hadron_n++;
   			_stats._mc_hadron_E[i]=bbbar_hadron.at(i)->getEnergy();
   			_stats._mc_hadron_px[i]=bbbar_hadron.at(i)->getMomentum()[0];
   			_stats._mc_hadron_py[i]=bbbar_hadron.at(i)->getMomentum()[1];
   			_stats._mc_hadron_pz[i]=bbbar_hadron.at(i)->getMomentum()[2];
   			_stats._mc_hadron_pdg[i]=bbbar_hadron.at(i)->getPDG();
+        std::cout << "     Filled pdg: " << _stats._mc_hadron_pdg[i] << std::endl;
   			_stats._mc_hadron_charge[i]=bbbar_hadron.at(i)->getCharge();
   			_stats._mc_hadron_m[i]=bbbar_hadron.at(i)->getMass();
 
-            //Consists particle object which has 4-momentum
+        //Consists particle object which has 4-momentum
   			particles.push_back(PseudoJet(bbbar_hadron.at(i)->getMomentum()[0], bbbar_hadron.at(i)->getMomentum()[1], bbbar_hadron.at(i)->getMomentum()[2], bbbar_hadron.at(i)->getEnergy()));
   			
   			QQbarTools::PrintParticle(bbbar_hadron.at(i));
   		} else { //If bbbar_hadron is empty(hadrons nothing), entry just zero
+        error++;
   			_stats._mc_hadron_n=0;
   			_stats._mc_hadron_E[i]=0;
   			_stats._mc_hadron_px[i]=0;
@@ -274,6 +278,7 @@ namespace QQbarProcessor
   			_stats._mc_hadron_m[i]=0;
   		}
   	}//hadrons loop
+    //std::cout << "NULL bbbar_hadron:" << error << std::endl;
 
   	if(particles.size()>1) {
   		ClusterSequence cs(particles, jet_def);

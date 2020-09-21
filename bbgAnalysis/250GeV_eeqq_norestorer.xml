@@ -16,6 +16,7 @@
 			/hsm/ilc/grid/storm/prod/ilc/mc-dbd/ild/dst-merged/250-TDR_ws/2f-highM_Z_hadronic/ILD_o1_v05/v01-16-p10_250/rv01-16-p10_250.sv01-14-01-p00.mILD_o1_v05.E250-TDR_ws.I110011.P2f-highM_z_h.eL.pR_dst_7637_00001_DST.slcio
 		</parameter>
 		<parameter name="GearXMLFile" value="GearOutput.xml"/>
+        <parameter name="MaxRecordNumber" value="100"/>
 		<parameter name="SkipNEvents" value="0"/>
 		<parameter name="SuppressCheck" value="false"/>
 		<parameter name="Verbosity" options="DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT">
@@ -165,7 +166,8 @@
         <parameter name="JetCollectionName" type="string" lcioInType="Vertex"> RefinedJets </parameter>
         <parameter name="JetRelCollectionName" type="string" lcioInType="Vertex"> RefinedJets_rel </parameter>
         <parameter name="MCCollectionName" type="string" lcioInType="MCParticle"> MCParticlesSkimmed</parameter>
-        <parameter name="ROOTFileName" type="string">7637_00001_norestorer_v02-00-01.root</parameter>
+        <!--parameter name="ROOTFileName" type="string">7637_00001_norestorer_v02-00-01.root</parameter-->
+        <parameter name="ROOTFileName" type="string">7637_00001_norestorer_v02-01-02.root</parameter>
         <parameter name="Rparam_jet_ps" type="float">1.25</parameter>  
         <parameter name="pparam_jet_ps" type="float">1</parameter>  
        <parameter name="AnalysisType" type="int">2</parameter>
