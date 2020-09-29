@@ -1,0 +1,13 @@
+Place : TestbbgProcessor/src
+
+In this directory, following source files of Processor are stored.
+
+1. QQbarProcessor.cc  (<- Include TestbbgProcessor/include/QQbarProcessor.hh)
+     QQbarProcessor.hh <- Include BBbarAnalysis.hh TTbarAnalysis.hh
+       BBbarAnalysis.hh TTbarAnalysis.hh <- Include QQbarTools.hh QQbarMCOperator.hh
+         QQbarTools.hh QQbarMCOperator.hh <- Include MathOperator.hh
+         QQbarMCOperator <- ClusteringOperator.hh VertexChargeOperator.hh TopQuark.hh RecoJet.hh TreeWriter.hh 
+                            TreeStructures.hh
+
+2. BBbarProcessor.cc
+3. TTbarProcessor.cc
