@@ -195,8 +195,17 @@ void observable::AnalysisR3(int n_entries, bool inclusive) {
         }
       }//ycut loop
     }//uds if
+
+    std::cout << "### MC ISR energy cut used ###" << std::endl;
+    std::cout << "### MC pid reference used ###" << std::endl;
+    std::cout << "        STEP1       | STEP2       | STEP3       | Final STEP   " << std::endl;
+    std::cout << "Nbb  | " << Rall_b_reco[0] << "     | " << Rall_b_reco[1] << "     | " << Rall_b_reco[2] << "     | --------- | " << Rall_b_reco[3] << std::endl;
+    std::cout << "Nll  | " << Rall_l_reco[0] << "     | " << Rall_l_reco[1] << "     | " << " --------- | " << Rall_l_reco[2] << "     | " << Rall_l_reco[3] << std::endl;
+    std::cout << "Nbbj | " << R3b_reco[0][10] << "     | " << R3b_reco[1][10] << "     | " << R3b_reco[2][10] << "     | --------- | " << R3b_reco[3][10] << std::endl;
+    std::cout << "Nllj | " << R3l_reco[0][10] << "     | " << R3l_reco[1][10] << "     | " << " --------- | " << R3l_reco[2][10] << "     | " << R3l_reco[3][10] << std::endl;
+    std::cout << "" << std::endl;
   }//event loop
-  std::cout << "COMPLETE" << std::endl;
+  //std::cout << "COMPLETE" << std::endl;
 
 
   //=== Calculate Observables R3b & R3l
@@ -415,7 +424,9 @@ void observable::AnalysisR3_cambridge(int n_entries) {
     pjet2.push_back(jet_py[1]);
     pjet2.push_back(jet_pz[1]);
     //The (averaged) polar angle of reconstructed jets
-    float costheta_reco = (fabs(GetCostheta(pjet1))+fabs(GetCostheta(pjet2)))/2.;
+    //float costheta_reco = (fabs(GetCostheta(pjet1))+fabs(GetCostheta(pjet2)))/2.;
+    float costheta_reco1 = fabs(GetCostheta(pjet1));
+    float costheta_reco2 = fabs(GetCostheta(pjet2));
 
     //Extract bbbar event
     if(fabs(mc_quark_pdg[0])==5) {
@@ -436,7 +447,8 @@ void observable::AnalysisR3_cambridge(int n_entries) {
         Rall_b_hadron[2]++;
       }
       //--- Count the Number of bbbar event @STEP2+costheta<0.8
-      if(PreSelection(2,35)==true && costheta_reco<0.8) {
+      //if(PreSelection(2,35)==true && costheta_reco<0.8) {
+      if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) {
         Rall_b_ps[3]++;
         Rall_b_reco[3]++;
         Rall_b_hadron[3]++;
@@ -455,7 +467,8 @@ void observable::AnalysisR3_cambridge(int n_entries) {
           R3b_ps[0][iycut]++;
           if(PreSelection(1,35)==true) R3b_ps[1][iycut]++;
           if(PreSelection(2,35)==true) R3b_ps[2][iycut]++;
-          if(PreSelection(2,35)==true && costheta_reco<0.8) R3b_ps[3][iycut]++;
+          //if(PreSelection(2,35)==true && costheta_reco<0.8) R3b_ps[3][iycut]++;
+          if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3b_ps[3][iycut]++;
         }
 
 
@@ -466,8 +479,15 @@ void observable::AnalysisR3_cambridge(int n_entries) {
           R3b_reco[0][iycut]++;
           if(PreSelection(1,35)==true) R3b_reco[1][iycut]++;
           if(PreSelection(2,35)==true) R3b_reco[2][iycut]++;
-          if(PreSelection(2,35)==true && costheta_reco<0.8) R3b_reco[3][iycut]++;
+          //if(PreSelection(2,35)==true && costheta_reco<0.8) R3b_reco[3][iycut]++;
+          if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3b_reco[3][iycut]++;
         }
+        /*if(mc_quark_ps_ycut[iycut]<0.01) {
+          R3b_reco[0][iycut]++;
+          if(PreSelection(1,35)==true) R3b_reco[1][iycut]++;
+          if(PreSelection(2,35)==true) R3b_reco[2][iycut]++;
+          if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3b_reco[3][iycut]++;
+        }*/
 
 
         njets_condition = false;
@@ -476,8 +496,15 @@ void observable::AnalysisR3_cambridge(int n_entries) {
           R3b_hadron[0][iycut]++;
           if(PreSelection(1,35)==true) R3b_hadron[1][iycut]++;
           if(PreSelection(2,35)==true) R3b_hadron[2][iycut]++;
-          if(PreSelection(2,35)==true && costheta_reco<0.8) R3b_hadron[3][iycut]++;
+          //if(PreSelection(2,35)==true && costheta_reco<0.8) R3b_hadron[3][iycut]++;
+          if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3b_hadron[3][iycut]++;
         }
+        /*if(mc_quark_ps_ycut[iycut]<0.01) {
+          R3b_hadron[0][iycut]++;
+          if(PreSelection(1,35)==true) R3b_hadron[1][iycut]++;
+          if(PreSelection(2,35)==true) R3b_hadron[2][iycut]++;
+          if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3b_hadron[3][iycut]++;
+        }*/
       }//ycut loop
     }//bottom if
 
@@ -501,7 +528,8 @@ void observable::AnalysisR3_cambridge(int n_entries) {
         Rall_l_hadron[2]++;
       }
       //--- Count the Number of llbar event @STEP2+costheta<0.8
-      if(PreSelection(3,35)==true && costheta_reco<0.8) {
+      //if(PreSelection(3,35)==true && costheta_reco<0.8) {
+      if(PreSelection(3,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) {
         Rall_l_ps[3]++;
         Rall_l_reco[3]++;
         Rall_l_hadron[3]++;
@@ -516,7 +544,8 @@ void observable::AnalysisR3_cambridge(int n_entries) {
           R3l_ps[0][iycut]++;
           if(PreSelection(1,35)==true) R3l_ps[1][iycut]++;
           if(PreSelection(3,35)==true) R3l_ps[2][iycut]++;
-          if(PreSelection(3,35)==true && costheta_reco<0.8) R3l_ps[3][iycut]++;
+          //if(PreSelection(3,35)==true && costheta_reco<0.8) R3l_ps[3][iycut]++;
+          if(PreSelection(3,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3l_ps[3][iycut]++;
         }
 
         njets_condition = false;
@@ -526,7 +555,8 @@ void observable::AnalysisR3_cambridge(int n_entries) {
           R3l_reco[0][iycut]++;
           if(PreSelection(1,35)==true) R3l_reco[1][iycut]++;
           if(PreSelection(3,35)==true) R3l_reco[2][iycut]++;
-          if(PreSelection(3,35)==true && costheta_reco<0.8) R3l_reco[3][iycut]++;
+          //if(PreSelection(3,35)==true && costheta_reco<0.8) R3l_reco[3][iycut]++;
+          if(PreSelection(3,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3l_reco[3][iycut]++;
         }
 
 
@@ -536,12 +566,30 @@ void observable::AnalysisR3_cambridge(int n_entries) {
           R3l_hadron[0][iycut]++;
           if(PreSelection(1,35)==true) R3l_hadron[1][iycut]++;
           if(PreSelection(3,35)==true) R3l_hadron[2][iycut]++;
-          if(PreSelection(3,35)==true && costheta_reco<0.8) R3l_hadron[3][iycut]++;
+          //if(PreSelection(3,35)==true && costheta_reco<0.8) R3l_hadron[3][iycut]++;
+          if(PreSelection(3,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3l_hadron[3][iycut]++;
         }
+        /*if(mc_quark_ps_ycut[iycut]<0.01) {
+          R3l_hadron[0][iycut]++;
+          if(PreSelection(1,35)==true) R3l_hadron[1][iycut]++;
+          if(PreSelection(3,35)==true) R3l_hadron[2][iycut]++;
+          if(PreSelection(3,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3l_hadron[3][iycut]++;
+        }*/
       }//ycut loop
     }//uds if
   }//event loop
-  std::cout << "COMPLETE" << std::endl;
+
+  /*std::cout << "EVENT[ " << nentries << " ]" << std::endl;
+  std::cout << "### MC ISR energy cut used ###" << std::endl;
+  std::cout << "### MC pid reference used ###" << std::endl;
+  std::cout << "        STEP1       | STEP2       | STEP3       | Final STEP   " << std::endl;
+  std::cout << "Nbb  | " << Rall_b_reco[0] << "     | " << Rall_b_reco[1] << "     | " << Rall_b_reco[2] << "     | --------- | " << Rall_b_reco[3] << std::endl;
+  std::cout << "Nll  | " << Rall_l_reco[0] << "     | " << Rall_l_reco[1] << "     | " << " --------- | " << Rall_l_reco[2] << "     | " << Rall_l_reco[3] << std::endl;
+  std::cout << "Nbbj | " << R3b_reco[0][10] << "     | " << R3b_reco[1][10] << "     | " << R3b_reco[2][10] << "     | --------- | " << R3b_reco[3][10] << std::endl;
+  std::cout << "Nllj | " << R3l_reco[0][10] << "     | " << R3l_reco[1][10] << "     | " << " --------- | " << R3l_reco[2][10] << "     | " << R3l_reco[3][10] << std::endl;
+  std::cout << "" << std::endl;*/
+
+  //std::cout << "COMPLETE" << std::endl;
 
 
   //=== Calculate Observables R3b & R3l
@@ -764,21 +812,28 @@ void observable::AnalysisR3_cambridge_contami(int n_entries) {
     pjet2.push_back(jet_px[1]);
     pjet2.push_back(jet_py[1]);
     pjet2.push_back(jet_pz[1]);
-    float costheta_reco = (fabs(GetCostheta(pjet1))+fabs(GetCostheta(pjet2)))/2.;
+    //float costheta_reco = (fabs(GetCostheta(pjet1))+fabs(GetCostheta(pjet2)))/2.;
+    float costheta_reco1 = fabs(GetCostheta(pjet1));
+    float costheta_reco2 = fabs(GetCostheta(pjet2));
 
     //No PDG choice, No Ev cut
     //count as Nbb(includes contamination)
     //count as Nll(includes contamination)
     Rall_b_reco[0]++;
     Rall_l_reco[0]++;
+
     if(PreSelection(1,35)==true) {
       Rall_b_reco[1]++;
       Rall_l_reco[1]++;
     }
-    if(PreSelection(2,35)==true) Rall_b_reco[2]++; 
-    if(PreSelection(2,35)==true && costheta_reco<0.8) Rall_b_reco[3]++;
+    if(PreSelection(2,35)==true) Rall_b_reco[2]++;
+    //if(PreSelection(2,35)==true && costheta_reco<0.8) Rall_b_reco[3]++;
+    if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) Rall_b_reco[3]++;
+
     if(PreSelection(3,35)==true) Rall_l_reco[2]++; 
-    if(PreSelection(3,35)==true && costheta_reco<0.8) Rall_l_reco[3]++;
+    //if(PreSelection(3,35)==true && costheta_reco<0.8) Rall_l_reco[3]++;
+    if(PreSelection(3,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) Rall_l_reco[3]++;
+
 
     //count as Nbbj or Nllj
     for(int iycut=0; iycut<50; iycut++) {
@@ -793,12 +848,37 @@ void observable::AnalysisR3_cambridge_contami(int n_entries) {
           R3l_reco[1][iycut]++;
         }
         if(PreSelection(2,35)==true) R3b_reco[2][iycut]++;
-        if(PreSelection(2,35)==true && costheta_reco<0.8) R3b_reco[3][iycut]++;
+        //if(PreSelection(2,35)==true && costheta_reco<0.8) R3b_reco[3][iycut]++;
+        if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3b_reco[3][iycut]++;
         if(PreSelection(3,35)==true) R3l_reco[2][iycut]++;
-        if(PreSelection(3,35)==true && costheta_reco<0.8) R3l_reco[3][iycut]++;
+        //if(PreSelection(3,35)==true && costheta_reco<0.8) R3l_reco[3][iycut]++;
+        if(PreSelection(3,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3l_reco[3][iycut]++;
       }
+
+      /*if(mc_quark_ps_ycut[iycut]<0.01) {
+        R3b_reco[0][iycut]++;
+        R3l_reco[0][iycut]++;
+        if(PreSelection(1,35)==true) {
+          R3b_reco[1][iycut]++;
+          R3l_reco[1][iycut]++;
+        }
+        if(PreSelection(2,35)==true) R3b_reco[2][iycut]++;
+        if(PreSelection(2,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3b_reco[3][iycut]++;
+        if(PreSelection(3,35)==true) R3l_reco[2][iycut]++;
+        if(PreSelection(3,35)==true && costheta_reco1<0.8 && costheta_reco2<0.8) R3l_reco[3][iycut]++; 
+      }*/
     }//ycut loop
   }//event loop
+
+  /*std::cout << "EVENT[ " << nentries << " ]" << std::endl;
+  std::cout << "### MC ISR energy cut NOT used ###" << std::endl;
+  std::cout << "### MC pid reference NOT used ###" << std::endl;
+  std::cout << "        STEP1       | STEP2       | STEP3       | Final STEP   " << std::endl;
+  std::cout << "Nbb  |  " << Rall_b_reco[0] << " | " << Rall_b_reco[1] << "     | " << Rall_b_reco[2] << "     |---------| " << Rall_b_reco[3] << std::endl;
+  std::cout << "Nll  |  " << Rall_l_reco[0] << " | " << Rall_l_reco[1] << "     |" << "---------| " << Rall_l_reco[2] << "     | " << Rall_l_reco[3] << std::endl;
+  std::cout << "Nbbj |  " << R3b_reco[0][10] << "      | " << R3b_reco[1][10] << "    | " << R3b_reco[2][10] << "     |---------| " << R3b_reco[3][10] << std::endl;
+  std::cout << "Nllj |  " << R3l_reco[0][10] << "      | " << R3l_reco[1][10] << "    |" << "---------| " << R3l_reco[2][10] << "     | " << R3l_reco[3][10] << std::endl;
+  std::cout << "" << std::endl;*/
 
   //=== Calculation
   for(int istep=0; istep<4; istep++) {
