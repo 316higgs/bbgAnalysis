@@ -33,6 +33,7 @@ void R3bl_plots() {
   //TString filename = folder+"R3_cambridge_signal_eR.root";
   //TFile *f = new TFile(filename);
   TFile* f = new TFile("output_files/output_cambridge_merged_restorer_v02-01-02.root");
+  TFile* f2 = new TFile("output_files/output_cambridge_merged_restorer_contami_v02-01-02.root");
 
   //PS level
   TGraphErrors *R3b_ps[4];
@@ -49,8 +50,13 @@ void R3bl_plots() {
   TGraphErrors *R3l_reco[4];
   TGraphErrors *R3bl_reco[4];
 
-  double yR3bl_ps[4], yR3bl_reco[4], yR3bl_hadron[4];
-  double eyR3bl_ps[4], eyR3bl_reco[4], eyR3bl_hadron[4];
+  //Reco level includes contamination
+  TGraphErrors *R3b_reco_con[4];
+  TGraphErrors *R3l_reco_con[4];
+  TGraphErrors *R3bl_reco_con[4];
+
+  double yR3bl_ps[4], yR3bl_reco[4], yR3bl_hadron[4], yR3bl_reco_con[4];
+  double eyR3bl_ps[4], eyR3bl_reco[4], eyR3bl_hadron[4], eyR3bl_reco_con[4];
   double x[4];
 
   for(int i=0; i<4; i++ ) {
@@ -84,10 +90,20 @@ void R3bl_plots() {
     yR3bl_reco[i]=y_reco[10];   //R3bl for each ycuts
     eyR3bl_reco[i]=ey_reco[10]; //error
 
+    //Reco level includes contamination
+    R3b_reco_con[i]=(TGraphErrors*)f2->Get(TString::Format("R3b_Reco_STEP%i",i));
+    R3l_reco_con[i]=(TGraphErrors*)f2->Get(TString::Format("R3l_Reco_STEP%i",i));
+    R3bl_reco_con[i]=(TGraphErrors*)f2->Get(TString::Format("R3bl_Reco_STEP%i",i));
+
+    Double_t *y_reco_con = R3bl_reco_con[i]->GetY();
+    Double_t *ey_reco_con = R3bl_reco_con[i]->GetEY();
+    yR3bl_reco_con[i]=y_reco_con[10];   //R3bl for each ycuts
+    eyR3bl_reco_con[i]=ey_reco_con[10]; //error
+    
     x[i]=i;
   }
 
-  TCanvas* canvas5 = new TCanvas("R3bl_001", "R3bl_001", 800, 800);
+  /*TCanvas* canvas5 = new TCanvas("R3bl_001", "R3bl_001", 800, 800);
   canvas5->cd();
 
   const Int_t LEVEL_PS=1;
@@ -163,16 +179,16 @@ void R3bl_plots() {
   legend -> AddEntry(g_r3bl_PS, "STEP2&3 + |costheta|<0.8", "pl");
   //legend -> AddEntry(g_r3bl_HAD, "STEP2&3 + |costheta|<0.8", "pl");
   //legend -> AddEntry(g_r3bl_REC, "STEP2&3 + |costheta|<0.8", "pl");
-  /*legend -> AddEntry(g_r3bl_PS, "STEP2&3", "pl");
-  legend -> AddEntry(g_r3bl_HAD, "STEP2&3", "pl");
-  legend -> AddEntry(g_r3bl_REC, "STEP2&3", "pl");*/
+  //legend -> AddEntry(g_r3bl_PS, "STEP2&3", "pl");
+  //legend -> AddEntry(g_r3bl_HAD, "STEP2&3", "pl");
+  //legend -> AddEntry(g_r3bl_REC, "STEP2&3", "pl");
   legend -> AddEntry(g_theo, "Theory(0.995+-0.0005)", "pl");
   legend -> SetLineColor(0);
   legend -> SetFillColor(0);
   legend -> SetFillStyle(0);
   legend -> SetLineStyle(0);
   legend -> SetShadowColor(0);
-  legend -> Draw();
+  legend -> Draw();*/
 
 
   //R3bl for each steps (assume @ycut=0.01)
@@ -308,9 +324,9 @@ void R3bl_plots() {
 
   // ---------------------------------------
 
-  /*TCanvas* canvas4 = new TCanvas("R3bl_final", "R3bl_final", 800, 800);
+  TCanvas* canvas4 = new TCanvas("R3bl_final", "R3bl_final", 800, 800);
   canvas4 -> cd();
-  TLegend* leg4 = new TLegend(0.3,0.2,0.65,0.35);
+  TLegend* leg4 = new TLegend(0.15,0.2,0.5,0.35);
   leg4 -> SetTextSize(0.033);
   leg4 -> SetTextFont(42);
 
@@ -321,24 +337,34 @@ void R3bl_plots() {
   R3bl_ps[3]->SetLineColor(kPink-8);
   R3bl_hadron[3]->SetLineColor(kTeal+4);
   R3bl_reco[3]->SetLineColor(kAzure+2);
+  R3bl_reco_con[3]->SetLineColor(kViolet+4);
   R3bl_ps[3]->SetLineWidth(2);
   R3bl_hadron[3]->SetLineWidth(2);
   R3bl_reco[3]->SetLineWidth(2);
+  R3bl_reco_con[3]->SetLineWidth(2);
 
   R3bl_ps[3]->Draw("AC");
   R3bl_hadron[3]->Draw("C");
   R3bl_reco[3]->Draw("C");
+  R3bl_reco_con[3]->Draw("C");
 
   leg4->AddEntry(R3bl_ps[3],TString::Format("PS - Cambridge :STEP2&3 + |costheta|<0.8"),"l");
   leg4->AddEntry(R3bl_hadron[3],TString::Format("Hadron - Cambridge :STEP2&3 + |costheta|<0.8"),"l");
   leg4->AddEntry(R3bl_reco[3],TString::Format("Reco - Cambridge :STEP2&3 + |costheta|<0.8"),"l");
+  leg4->AddEntry(R3bl_reco_con[3],TString::Format("Reco - Cambridge :STEP2&3 + |costheta|<0.8"),"l");
 
   leg4->SetFillStyle(0);
   leg4->SetLineWidth(0);
   leg4->SetLineColor(0);
   //  leg1->SetShadowColor(0);
   leg4->SetBorderSize(0);
-  leg4->Draw();*/
+  leg4->Draw();
+
+  TText* t = new TText(0.15,0.85,"e+e- --> qq @250GeV (q=udscb)");
+  t -> SetNDC(1);
+  t -> SetTextFont(42);
+  t -> SetTextSize(0.045);
+  t -> Draw();
 
   // ---------------------------------------
 
