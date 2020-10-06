@@ -414,6 +414,26 @@ void Correction() {
     g_cdet_con_b -> Draw("SAMEP");
     g_cdet_con_l -> Draw("SAMEP");
     //g_cdet_bl -> Draw("SAMEP");
+	
+    Double_t* cb_list = g_cdet_b -> GetY();
+    Double_t* cl_list = g_cdet_l -> GetY();
+    Double_t* cb_con_list = g_cdet_con_b -> GetY();
+    Double_t* cl_con_list = g_cdet_con_l -> GetY();
+    Double_t* cb_elist = g_cdet_b -> GetEY();
+    Double_t* cl_elist = g_cdet_l -> GetEY();
+    Double_t* cb_con_elist = g_cdet_con_b -> GetEY();
+    Double_t* cl_con_elist = g_cdet_con_l -> GetEY();
+    double cb_001 = cb_list[10];
+    double cl_001 = cl_list[10];
+    double cb_con_001 = cb_con_list[10];
+    double cl_con_001 = cl_con_list[10];
+    double ecb_001 = cb_elist[10];
+    double ecl_001 = cl_elist[10];
+    double ecb_con_001 = cb_con_elist[10];
+    double ecl_con_001 = cl_con_elist[10];
+    std::cout << "Cb @ yc=0.01 : " << cb_001 << "+-" << ecb_001 << " ,  Cl @ yc=0.01 : " << cl_001 << "+-" << ecl_001 << " -->  Cdet = " << cb_001/cl_001 << "+-" << eC_det_bl[10] << std::endl;
+    std::cout << "C'b @ yc=0.01 : " << cb_con_001 << "+-" << ecb_con_001 << " ,  C'l @ yc=0.01 : " << cl_con_001 << "+-" << ecl_con_001 << " -->  C'det = " << cb_con_001/cl_con_001 << "+-" << eC_det_con_bl[10] << std::endl;
+    std::cout << "Cdet/C'det = " << (cb_001/cl_001)/(cb_con_001/cl_con_001) << "+-" << eratio_bl[10] << std::endl;
 
 
     legend4 -> AddEntry(g_cdet_b, "C^{det}_{b}", "p");
