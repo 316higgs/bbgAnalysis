@@ -300,7 +300,7 @@ public :
    //analysis
    virtual void     AnalysisR3(int n=-1, bool inclusive=false);
    virtual void     AnalysisR3_cambridge(int n=-1);
-   //virtual void     AnalysisR3_hadron_cambridge(int n=-1);
+   virtual void     AnalysisR3_cambridge_contami(int n=-1);
    virtual void     AnalysisR3_y23(int n=-1);
    virtual void     Efficiencies(int n=-1);
    virtual void     matching(int n=-1);
