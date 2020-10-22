@@ -1,0 +1,250 @@
+\section{Flavor\-Tag.\-cc File Reference}
+\label{FlavorTag_8cc}\index{Flavor\-Tag.\-cc@{Flavor\-Tag.\-cc}}
+{\ttfamily \#include \char`\"{}Flavor\-Tag.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Event\-Store.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Lcfi\-Interface.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Jet\-Finder.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tree\-Storer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Vertex\-Fitter\-L\-C\-F\-I.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Vertex\-Finder\-Tear\-Down.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Vertex\-Finder\-Perfect.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}algo\-Sig\-Prob.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}algo\-Etc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Track\-Selector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-R\-O\-O\-T.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-Interpreter.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-File.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-Tree.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-Lorentz\-Vector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-Cut.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}T\-Random3.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}flavtag.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-H1\-F.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Auxiliary}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Auxiliary\-M}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Ntrk\-Without\-V0}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Ntrk}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Nvtx\-All}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mass\-All}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Len12\-All}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Len12\-All\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft1\-Vtx\-Prob}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Nvtx}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Len1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Len2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Len12}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Len1\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Len2\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Len12\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Sig1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Sig2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Sig12}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Sig1\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Sig2\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Sig12\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Dir\-Ang1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Dir\-Ang2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Dir\-Ang12}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Dir\-Ang1\-Times\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Dir\-Ang2\-Times\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Dir\-Ang12\-Times\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mom}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mom1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mom2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mom\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mom1\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mom2\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mass\-Pt\-Corr}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Prob}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mass}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mass1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mass2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mult}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mult1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Mult2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk1\-D0\-Sig}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk2\-D0\-Sig}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk1\-Z0\-Sig}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk2\-Z0\-Sig}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk1\-Pt}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk2\-Pt}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk1\-Pt\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk2\-Pt\-By\-Jet\-E}
+\item 
+class {\bf lcfiplus\-::\-Ft\-J\-Prob\-R}
+\item 
+class {\bf lcfiplus\-::\-Ft\-J\-Prob\-Z}
+\item 
+class {\bf lcfiplus\-::\-Ft\-J\-Prob\-R5\-Sigma}
+\item 
+class {\bf lcfiplus\-::\-Ft\-J\-Prob\-Z5\-Sigma}
+\item 
+class {\bf lcfiplus\-::\-Ft\-J\-Prob\-R2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-J\-Prob\-Z2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-J\-Prob\-R25\-Sigma}
+\item 
+class {\bf lcfiplus\-::\-Ft\-J\-Prob\-Z25\-Sigma}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Sphericity}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk\-Mass}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Trk\-Mass2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-N\-Sec\-Tracks}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Vtx\-Longitudinal\-Deviation}
+\item 
+class {\bf lcfiplus\-::\-Ft\-N\-Muon}
+\item 
+class {\bf lcfiplus\-::\-Ft\-N\-Electron}
+\item 
+class {\bf lcfiplus\-::\-Ft\-N\-Electron\-P\-I\-D}
+\item 
+class {\bf lcfiplus\-::\-Ft\-N\-Muon\-P\-I\-D}
+\item 
+class {\bf lcfiplus\-::\-Ft\-M\-C\-N\-Muon}
+\item 
+class {\bf lcfiplus\-::\-Ft\-M\-C\-N\-Electron}
+\item 
+class {\bf lcfiplus\-::\-Ft\-M\-C\-N\-B}
+\item 
+class {\bf lcfiplus\-::\-Ft\-M\-C\-N\-C}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0b\-Prob}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0b\-Prob2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0c\-Prob}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0c\-Prob2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0q\-Prob}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0q\-Prob2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0b\-Prob\-Signed}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0c\-Prob\-Signed}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0q\-Prob\-Signed}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0b\-Prob\-I\-P}
+\item 
+class {\bf lcfiplus\-::\-Ft\-D0c\-Prob\-I\-P}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Z0b\-Prob}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Z0b\-Prob2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Z0c\-Prob}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Z0c\-Prob2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Z0q\-Prob}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Z0q\-Prob2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Z0b\-Prob\-I\-P}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Z0c\-Prob\-I\-P}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Corr\-Vtx\-Mass1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Corr\-Vtx\-Mass2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Corr\-Vtx\-Mass\-All}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Corr\-Vtx\-Momentum1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Corr\-Vtx\-Momentum2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Corr\-Vtx\-Momentum\-All}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Pi0\-Momentum1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Pi0\-Momentum2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-Pi0\-Momentum\-All}
+\item 
+class {\bf lcfiplus\-::\-Ft\-N\-Pi0s1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-N\-Pi0s2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-B\-Ness0}
+\item 
+class {\bf lcfiplus\-::\-Ft\-B\-Ness1}
+\item 
+class {\bf lcfiplus\-::\-Ft\-B\-Ness2}
+\item 
+class {\bf lcfiplus\-::\-Ft\-B\-Ness3}
+\item 
+class {\bf lcfiplus\-::\-Ft\-B\-Ness\-Mass}
+\item 
+class {\bf lcfiplus\-::\-Ft\-N\-B\-Ness}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus}
+\end{DoxyCompactItemize}

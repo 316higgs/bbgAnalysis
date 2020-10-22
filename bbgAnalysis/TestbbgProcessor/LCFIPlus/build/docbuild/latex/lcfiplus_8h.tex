@@ -1,0 +1,161 @@
+\section{lcfiplus.\-h File Reference}
+\label{lcfiplus_8h}\index{lcfiplus.\-h@{lcfiplus.\-h}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include \char`\"{}Rtypes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-Object.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-Lorentz\-Vector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-Vector3.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Event\-Store.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\-V\-E\-N\-T/\-Cluster.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$typeinfo$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf lcfiplus\-::\-Delete\-Vector$<$ T $>$}
+\item 
+struct {\bf lcfiplus\-::\-Error\-Rescale}
+\item 
+class {\bf lcfiplus\-::\-Exception}
+\item 
+class {\bf lcfiplus\-::\-Globals}
+\item 
+class {\bf lcfiplus\-::\-Parameters}
+\item 
+class {\bf lcfiplus\-::\-Algorithm}
+\item 
+class {\bf lcfiplus\-::\-Event}
+\item 
+class {\bf lcfiplus\-::\-Track}
+\item 
+class {\bf lcfiplus\-::\-Neutral}
+\item 
+class {\bf lcfiplus\-::\-M\-C\-Particle}
+\item 
+class {\bf lcfiplus\-::\-M\-C\-Color\-Singlet}
+\item 
+class {\bf lcfiplus\-::\-Vertex}
+\item 
+class {\bf lcfiplus\-::\-M\-C\-Vertex}
+\item 
+class {\bf lcfiplus\-::\-Track\-Poca\-X\-Y}
+\item 
+class {\bf lcfiplus\-::\-Jet}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus}
+\item 
+{\bf lcfiplus\-::tpar}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef const vector$<$ const \\*
+Track $\ast$ $>$ {\bf lcfiplus\-::\-Track\-Vec}
+\item 
+typedef const vector$<$ const \\*
+Neutral $\ast$ $>$ {\bf lcfiplus\-::\-Neutral\-Vec}
+\item 
+typedef const vector$<$ const \\*
+M\-C\-Particle $\ast$ $>$ {\bf lcfiplus\-::\-M\-C\-Particle\-Vec}
+\item 
+typedef const vector$<$ const \\*
+M\-C\-Color\-Singlet $\ast$ $>$ {\bf lcfiplus\-::\-M\-C\-Color\-Singlet\-Vec}
+\item 
+typedef const vector$<$ const \\*
+Vertex $\ast$ $>$ {\bf lcfiplus\-::\-Vertex\-Vec}
+\item 
+typedef const vector$<$ const Jet $\ast$ $>$ {\bf lcfiplus\-::\-Jet\-Vec}
+\item 
+typedef vector$<$ const Track $\ast$ $>$\\*
+\-::const\-\_\-iterator {\bf lcfiplus\-::\-Track\-Vec\-Ite}
+\item 
+typedef vector$<$ const Neutral $\ast$ $>$\\*
+\-::const\-\_\-iterator {\bf lcfiplus\-::\-Neutral\-Vec\-Ite}
+\item 
+typedef vector$<$ const \\*
+M\-C\-Particle $\ast$ $>$\-::const\-\_\-iterator {\bf lcfiplus\-::\-M\-C\-Particle\-Vec\-Ite}
+\item 
+typedef vector$<$ const \\*
+M\-C\-Color\-Singlet $\ast$ $>$\\*
+\-::const\-\_\-iterator {\bf lcfiplus\-::\-M\-C\-Color\-Singlet\-Vec\-Ite}
+\item 
+typedef vector$<$ const Vertex $\ast$ $>$\\*
+\-::const\-\_\-iterator {\bf lcfiplus\-::\-Vertex\-Vec\-Ite}
+\item 
+typedef vector$<$ const Jet $\ast$ $>$\\*
+\-::const\-\_\-iterator {\bf lcfiplus\-::\-Jet\-Vec\-Ite}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf lcfiplus\-::tpar\-::par} \{ \\*
+{\bf lcfiplus\-::tpar\-::d0} =0, 
+{\bf lcfiplus\-::tpar\-::z0}, 
+{\bf lcfiplus\-::tpar\-::ph}, 
+{\bf lcfiplus\-::tpar\-::om}, 
+\\*
+{\bf lcfiplus\-::tpar\-::td}, 
+{\bf lcfiplus\-::tpar\-::par\-N}
+ \}
+\item 
+enum {\bf lcfiplus\-::tpar\-::cov} \{ \\*
+{\bf lcfiplus\-::tpar\-::d0d0} =0, 
+{\bf lcfiplus\-::tpar\-::d0ph}, 
+{\bf lcfiplus\-::tpar\-::phph}, 
+{\bf lcfiplus\-::tpar\-::d0om}, 
+\\*
+{\bf lcfiplus\-::tpar\-::phom}, 
+{\bf lcfiplus\-::tpar\-::omom}, 
+{\bf lcfiplus\-::tpar\-::d0z0}, 
+{\bf lcfiplus\-::tpar\-::z0ph}, 
+\\*
+{\bf lcfiplus\-::tpar\-::z0om}, 
+{\bf lcfiplus\-::tpar\-::z0z0}, 
+{\bf lcfiplus\-::tpar\-::d0td}, 
+{\bf lcfiplus\-::tpar\-::phtd}, 
+\\*
+{\bf lcfiplus\-::tpar\-::omtd}, 
+{\bf lcfiplus\-::tpar\-::z0td}, 
+{\bf lcfiplus\-::tpar\-::tdtd}, 
+{\bf lcfiplus\-::tpar\-::cov\-N}
+ \}
+\item 
+enum {\bf lcfiplus\-::tpar\-::hit} \{ \\*
+{\bf lcfiplus\-::tpar\-::\-V\-T\-X} =0, 
+{\bf lcfiplus\-::tpar\-::\-F\-T\-D}, 
+{\bf lcfiplus\-::tpar\-::\-S\-I\-T}, 
+{\bf lcfiplus\-::tpar\-::\-T\-P\-C}, 
+\\*
+{\bf lcfiplus\-::tpar\-::\-S\-E\-T}, 
+{\bf lcfiplus\-::tpar\-::\-E\-T\-D}, 
+{\bf lcfiplus\-::tpar\-::hit\-N}
+ \}
+\item 
+enum {\bf lcfiplus\-::tpar\-::calo} \{ \\*
+{\bf lcfiplus\-::tpar\-::ecal} =0, 
+{\bf lcfiplus\-::tpar\-::hcal}, 
+{\bf lcfiplus\-::tpar\-::yoke}, 
+{\bf lcfiplus\-::tpar\-::lcal}, 
+\\*
+{\bf lcfiplus\-::tpar\-::lhcal}, 
+{\bf lcfiplus\-::tpar\-::bcal}, 
+{\bf lcfiplus\-::tpar\-::calo\-N}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\vector$<$ const T $\ast$ $>$ $\ast$ {\bf lcfiplus\-::const\-Vector} (vector$<$ T $\ast$ $>$ $\ast$ptr)
+\item 
+{\footnotesize template$<$class T $>$ }\\vector$<$ const T $\ast$ $>$ \& {\bf lcfiplus\-::const\-Vector} (vector$<$ T $\ast$ $>$ \&ref)
+\item 
+{\footnotesize template$<$class T $>$ }\\const vector$<$ const T $\ast$ $>$ $\ast$ {\bf lcfiplus\-::const\-Vector} (const vector$<$ T $\ast$ $>$ $\ast$ptr)
+\item 
+{\footnotesize template$<$class T $>$ }\\const vector$<$ const T $\ast$ $>$ \& {\bf lcfiplus\-::const\-Vector} (const vector$<$ T $\ast$ $>$ \&ref)
+\end{DoxyCompactItemize}

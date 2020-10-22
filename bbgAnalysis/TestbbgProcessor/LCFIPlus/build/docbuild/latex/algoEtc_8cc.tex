@@ -1,0 +1,32 @@
+\section{algo\-Etc.\-cc File Reference}
+\label{algoEtc_8cc}\index{algo\-Etc.\-cc@{algo\-Etc.\-cc}}
+{\ttfamily \#include \char`\"{}lcfiplus.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}algo\-Etc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\-Random.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus}
+\item 
+{\bf lcfiplus\-::algo\-Etc}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf lcfiplus\-::algo\-Etc\-::min} (int a, int b)
+\item 
+void {\bf lcfiplus\-::algo\-Etc\-::make\-Beam\-Tracks} ({\bf Track} $\ast$\&t1, {\bf Track} $\ast$\&t2, bool smear=true)
+\item 
+void {\bf lcfiplus\-::algo\-Etc\-::make\-Beam\-Vertex} ({\bf Vertex} $\ast$\&vtx, bool smear=true)
+\item 
+void {\bf lcfiplus\-::algo\-Etc\-::connect\-Vertices\-To\-Jets} (const {\bf Jet\-Vec} \&jets, const vector$<$ {\bf Vertex} $\ast$ $>$ \&vtcs, vector$<$ vector$<$ {\bf Vertex} $\ast$ $>$ $>$ \&jet\-Vertices, vector$<$ vector$<$ const {\bf Track} $\ast$ $>$ $>$ \&jet\-Residual\-Tracks, const {\bf Vertex} $\ast$ip=0)
+\item 
+vector$<$ const {\bf Track} $\ast$ $>$ {\bf lcfiplus\-::algo\-Etc\-::extract\-Tracks} ({\bf Vertex\-Vec} \&vtx)
+\item 
+double {\bf lcfiplus\-::algo\-Etc\-::calc\-Thrust} (vector$<$ T\-Vector3 $>$ \&list, T\-Vector3 \&taxis)
+\item 
+bool {\bf lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Muon\-Finder} (const {\bf Track} $\ast$tr, double d0sigth, double z0sigth, double maxpos, double mudepmin, double ecaldepmin, double ecaldepmax, double hcaldepmin, double hcaldepmax, double maxclusterpertrackenergy=10., const {\bf Vertex} $\ast$ip=0)
+\item 
+bool {\bf lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Electron\-Finder} (const {\bf Track} $\ast$tr, double d0sigth, double z0sigth, double maxpos, double emin, double minfracecal, double minecalpertrackenergy, double maxecalpertrackenergy, const {\bf Vertex} $\ast$ip=0)
+\end{DoxyCompactItemize}

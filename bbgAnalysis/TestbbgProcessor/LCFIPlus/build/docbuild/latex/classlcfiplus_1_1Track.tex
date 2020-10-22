@@ -1,0 +1,649 @@
+\section{lcfiplus\-:\-:Track Class Reference}
+\label{classlcfiplus_1_1Track}\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}}
+
+
+{\ttfamily \#include $<$lcfiplus.\-h$>$}
+
+Inheritance diagram for lcfiplus\-:\-:Track\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlcfiplus_1_1Track}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf $\sim$\-Track} ()
+\item 
+int {\bf get\-Id} () const 
+\item 
+void {\bf set\-Id} (int id)
+\item 
+const {\bf lcfiplus\-::\-M\-C\-Particle} $\ast$ {\bf get\-Mcp} () const 
+\item 
+void {\bf set\-Mcp} (const {\bf lcfiplus\-::\-M\-C\-Particle} $\ast$mcp)
+\item 
+int {\bf get\-P\-D\-G} () const 
+\item 
+void {\bf set\-P\-D\-G} (int pdg)
+\item 
+double {\bf get\-Charge} () const 
+\item 
+void {\bf set\-Charge} (double charge)
+\item 
+double {\bf get\-D0} () const 
+\item 
+double {\bf get\-Z0} () const 
+\item 
+double {\bf get\-Phi} () const 
+\item 
+double {\bf get\-Omega} () const 
+\item 
+double {\bf get\-Tan\-Lambda} () const 
+\item 
+void {\bf set\-Helix} (double d0, double z0, double phi, double omega, double tan\-Lambda)
+\item 
+void {\bf set\-Helix} (double $\ast$par)
+\item 
+const double $\ast$ {\bf get\-Cov\-Matrix} () const 
+\item 
+void {\bf set\-Cov\-Matrix} (double $\ast$cov)
+\item 
+int {\bf get\-Vtx\-Hits} () const 
+\item 
+int {\bf get\-Ftd\-Hits} () const 
+\item 
+int {\bf get\-Sit\-Hits} () const 
+\item 
+int {\bf get\-Tpc\-Hits} () const 
+\item 
+int {\bf get\-Set\-Hits} () const 
+\item 
+int {\bf get\-Etd\-Hits} () const 
+\item 
+void {\bf set\-Track\-Hits} (int $\ast$hits)
+\item 
+const double $\ast$ {\bf get\-Calo\-Edep} () const 
+\item 
+void {\bf set\-Calo\-Edep} (double $\ast$calo)
+\item 
+double {\bf get\-Radius\-Of\-Innermost\-Hit} () const 
+\item 
+void {\bf set\-Radius\-Of\-Innermost\-Hit} (double rimh)
+\item 
+double {\bf get\-Chi2} () const 
+\item 
+void {\bf set\-Chi2} (double chi2)
+\item 
+int {\bf get\-Ndf} () const 
+\item 
+void {\bf set\-Ndf} (int ndf)
+\item 
+void {\bf set\-Flight\-Length} (double flt) const 
+\item 
+double {\bf get\-Flight\-Length} () const 
+\item 
+void {\bf set\-Particle\-I\-D\-Probability} (string par\-Name, double pid\-Probability)
+\item 
+double {\bf get\-Particle\-I\-D\-Probability} (const char $\ast$par\-Name) const 
+\item 
+void {\bf set\-Corr\-Energy} (double mass)
+\item 
+double {\bf get\-Corr\-Energy} () const 
+\item 
+void {\bf swap\-Energy} ()
+\item 
+void {\bf set\-B\-Ness} (double bness)
+\item 
+double {\bf get\-B\-Ness} () const 
+\item 
+double {\bf get\-C\-Ness} () const 
+\item 
+void {\bf set\-C\-Ness} (double cness)
+\item 
+double {\bf get\-X} () const 
+\item 
+double {\bf get\-Y} () const 
+\item 
+double {\bf get\-Z} () const 
+\item 
+T\-Vector3 {\bf get\-Pos} () const 
+\item 
+T\-Vector3 {\bf momentum\-At\-Vertex} (const {\bf Vertex} $\ast$vtx) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!$\sim$\-Track@{$\sim$\-Track}}
+\index{$\sim$\-Track@{$\sim$\-Track}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{$\sim$\-Track}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Track\-::$\sim$\-Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a4fb662c3ca1e16e42601ae90d38e68b7}
+
+
+\subsection{Member Function Documentation}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-B\-Ness@{get\-B\-Ness}}
+\index{get\-B\-Ness@{get\-B\-Ness}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-B\-Ness}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-B\-Ness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_acc7baf9e0f9ac065f16c94af73a8019b}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Calo\-Edep@{get\-Calo\-Edep}}
+\index{get\-Calo\-Edep@{get\-Calo\-Edep}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Calo\-Edep}]{\setlength{\rightskip}{0pt plus 5cm}const double$\ast$ lcfiplus\-::\-Track\-::get\-Calo\-Edep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_aa08e0d85f18e14903114b7c48b0ab52d}
+
+
+Referenced by lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Electron\-Finder(), and lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Muon\-Finder().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Charge@{get\-Charge}}
+\index{get\-Charge@{get\-Charge}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Charge}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Charge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a01a4a41424500dc72e2b42b205cf41bc}
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), lcfiplus\-::\-Helix\-::\-Helix(), lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-Jets(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-Vertices().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Chi2@{get\-Chi2}}
+\index{get\-Chi2@{get\-Chi2}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Chi2}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Chi2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a1418770bb7e482597604a44d9451615c}
+
+
+Referenced by lcfiplus\-::\-Test\-Algo\-::process(), and lcfiplus\-::\-Vertex\-Analysis\-::process().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-C\-Ness@{get\-C\-Ness}}
+\index{get\-C\-Ness@{get\-C\-Ness}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-C\-Ness}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-C\-Ness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_aa1f32fae4e93be63fcdc728805305095}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Corr\-Energy@{get\-Corr\-Energy}}
+\index{get\-Corr\-Energy@{get\-Corr\-Energy}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Corr\-Energy}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Corr\-Energy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_ab3c18d1f38468db70cdc2f9575151d08}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Cov\-Matrix@{get\-Cov\-Matrix}}
+\index{get\-Cov\-Matrix@{get\-Cov\-Matrix}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Cov\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}const double$\ast$ lcfiplus\-::\-Track\-::get\-Cov\-Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a9917d61c686e1c5eb8c0446b9111dc6e}
+
+
+Referenced by lcfiplus\-::\-Helix\-::\-Helix(), Kal\-Trk\-::\-Kal\-Trk(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Sort\-Tracks\-By\-I\-P\-Sig\-::operator()(), lcfiplus\-::\-Track\-Selector\-::passes\-Cut(), lcfiplus\-::\-Test\-Algo\-::process(), lcfiplus\-::\-Vertex\-Analysis\-::process(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0\-Significance(), lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Electron\-Finder(), lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Muon\-Finder(), test\-Suehara(), lcfiplus\-::algo\-Sig\-Prob\-::track\-D0\-Significance(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-Z0\-Significance().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-D0@{get\-D0}}
+\index{get\-D0@{get\-D0}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-D0}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-D0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_aa4a4d92756bd09c52fbc2f40d62efaa7}
+
+
+References lcfiplus\-::tpar\-::d0.
+
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), lcfiplus\-::\-Helix\-::\-Helix(), Kal\-Trk\-::\-Kal\-Trk(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Sort\-Tracks\-By\-I\-P\-Sig\-::operator()(), lcfiplus\-::\-Track\-Poca\-X\-Y\-::operator()(), lcfiplus\-::\-Track\-Selector\-::passes\-Cut(), lcfiplus\-::\-Test\-Algo\-::process(), lcfiplus\-::\-Vertex\-Analysis\-::process(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0(), lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Electron\-Finder(), lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Muon\-Finder(), and test\-Suehara().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Etd\-Hits@{get\-Etd\-Hits}}
+\index{get\-Etd\-Hits@{get\-Etd\-Hits}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Etd\-Hits}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-Etd\-Hits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_ad5a5fe81f30c83b372abf5e4394f7fbf}
+
+
+References lcfiplus\-::tpar\-::\-E\-T\-D.
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Flight\-Length@{get\-Flight\-Length}}
+\index{get\-Flight\-Length@{get\-Flight\-Length}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Flight\-Length}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Flight\-Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_ada1913d91d5abbb16a228c0a2ffc39b5}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Ftd\-Hits@{get\-Ftd\-Hits}}
+\index{get\-Ftd\-Hits@{get\-Ftd\-Hits}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Ftd\-Hits}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-Ftd\-Hits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_afcfdc5326a424892693a365d15fe0428}
+
+
+References lcfiplus\-::tpar\-::\-F\-T\-D.
+
+
+
+Referenced by lcfiplus\-::\-Track\-Selector\-::passes\-Cut(), lcfiplus\-::\-Vertex\-Analysis\-::process(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-Selection\-For\-Flavor\-Tag().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a0e0dd63fd9cf66074aafe1da18e229f0}
+
+
+Referenced by test\-Suehara().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Mcp@{get\-Mcp}}
+\index{get\-Mcp@{get\-Mcp}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Mcp}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf lcfiplus\-::\-M\-C\-Particle}$\ast$ lcfiplus\-::\-Track\-::get\-Mcp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a2a78a7fae944e5e4eb9f9b48be7645a7}
+
+
+Referenced by lcfiplus\-::\-Event\-::get\-M\-C\-Particle(), lcfiplus\-::\-Vertex\-::\-Print(), lcfiplus\-::\-Vertex\-Analysis\-::process(), lcfiplus\-::\-Test\-Algo\-V0\-::process(), and test\-Suehara().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Ndf@{get\-Ndf}}
+\index{get\-Ndf@{get\-Ndf}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Ndf}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-Ndf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_add39b0a7088d378998137599b9606c65}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Analysis\-::process().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Omega@{get\-Omega}}
+\index{get\-Omega@{get\-Omega}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Omega}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Omega (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a5b978890fa393d95f42cd0cd98c4aca3}
+
+
+References lcfiplus\-::tpar\-::om.
+
+
+
+Referenced by lcfiplus\-::\-Helix\-::\-Helix(), Kal\-Trk\-::\-Kal\-Trk(), and lcfiplus\-::\-Track\-Poca\-X\-Y\-::operator()().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Particle\-I\-D\-Probability@{get\-Particle\-I\-D\-Probability}}
+\index{get\-Particle\-I\-D\-Probability@{get\-Particle\-I\-D\-Probability}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Particle\-I\-D\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Particle\-I\-D\-Probability (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{par\-Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_abf37dbe53b40d7c8c41e3dc0eba4b82f}
+
+
+Referenced by lcfiplus\-::\-Jet\-Finder\-::prerun().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-P\-D\-G@{get\-P\-D\-G}}
+\index{get\-P\-D\-G@{get\-P\-D\-G}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-P\-D\-G}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-P\-D\-G (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_af7e3d9f497825733425f7546a106e538}
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Phi@{get\-Phi}}
+\index{get\-Phi@{get\-Phi}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Phi}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Phi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a57ecd45596715fce5766183e37a3c75c}
+
+
+References lcfiplus\-::tpar\-::ph.
+
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), lcfiplus\-::\-Helix\-::\-Helix(), Kal\-Trk\-::\-Kal\-Trk(), lcfiplus\-::\-Track\-Poca\-X\-Y\-::operator()(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), and lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Pos@{get\-Pos}}
+\index{get\-Pos@{get\-Pos}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}T\-Vector3 lcfiplus\-::\-Track\-::get\-Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a844c65afbd890ccf6ba96c2b8a5136c4}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Radius\-Of\-Innermost\-Hit@{get\-Radius\-Of\-Innermost\-Hit}}
+\index{get\-Radius\-Of\-Innermost\-Hit@{get\-Radius\-Of\-Innermost\-Hit}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Radius\-Of\-Innermost\-Hit}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Radius\-Of\-Innermost\-Hit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_aed578b9c8d1873ed311019e03198b0ef}
+
+
+Referenced by lcfiplus\-::\-Track\-Selector\-::passes\-Cut().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Set\-Hits@{get\-Set\-Hits}}
+\index{get\-Set\-Hits@{get\-Set\-Hits}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Set\-Hits}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-Set\-Hits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a56761919b1b2b5a83651d2bd57db762c}
+
+
+References lcfiplus\-::tpar\-::\-S\-E\-T.
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Sit\-Hits@{get\-Sit\-Hits}}
+\index{get\-Sit\-Hits@{get\-Sit\-Hits}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Sit\-Hits}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-Sit\-Hits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_ac930461ca4627613c18634a83698f19f}
+
+
+References lcfiplus\-::tpar\-::\-S\-I\-T.
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Tan\-Lambda@{get\-Tan\-Lambda}}
+\index{get\-Tan\-Lambda@{get\-Tan\-Lambda}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Tan\-Lambda}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Tan\-Lambda (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a9bf4404833d590b25cae2fb501113b3c}
+
+
+References lcfiplus\-::tpar\-::td.
+
+
+
+Referenced by lcfiplus\-::\-Helix\-::\-Helix(), Kal\-Trk\-::\-Kal\-Trk(), and lcfiplus\-::\-Test\-Algo\-V0\-::process().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Tpc\-Hits@{get\-Tpc\-Hits}}
+\index{get\-Tpc\-Hits@{get\-Tpc\-Hits}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Tpc\-Hits}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-Tpc\-Hits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a9541b8be9d1fafc951bb7c546bc03c5b}
+
+
+References lcfiplus\-::tpar\-::\-T\-P\-C.
+
+
+
+Referenced by lcfiplus\-::\-Track\-Selector\-::passes\-Cut().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Vtx\-Hits@{get\-Vtx\-Hits}}
+\index{get\-Vtx\-Hits@{get\-Vtx\-Hits}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Vtx\-Hits}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Track\-::get\-Vtx\-Hits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a4495d7d65a2a895b120bc524e1de49b9}
+
+
+References lcfiplus\-::tpar\-::\-V\-T\-X.
+
+
+
+Referenced by lcfiplus\-::\-Track\-Selector\-::passes\-Cut(), lcfiplus\-::\-Vertex\-Analysis\-::process(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-Selection\-For\-Flavor\-Tag().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Track_a5a344708726175cabd1c6ed5687c8706}
+
+
+References lcfiplus\-::tpar\-::d0, lcfiplus\-::tpar\-::om, and lcfiplus\-::tpar\-::ph.
+
+
+
+Referenced by match\-Mc\-Vertex(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-D0\-Significance().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Track_a9cb79ef8d0326388b2f68ce31ff85421}
+
+
+References lcfiplus\-::tpar\-::d0, lcfiplus\-::tpar\-::om, and lcfiplus\-::tpar\-::ph.
+
+
+
+Referenced by match\-Mc\-Vertex(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-D0\-Significance().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Z@{get\-Z}}
+\index{get\-Z@{get\-Z}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Z}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Track_a07761658981e40455b3bbafb5baa760d}
+
+
+References lcfiplus\-::tpar\-::om, and lcfiplus\-::tpar\-::z0.
+
+
+
+Referenced by match\-Mc\-Vertex(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-Z0\-Significance().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!get\-Z0@{get\-Z0}}
+\index{get\-Z0@{get\-Z0}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{get\-Z0}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Track\-::get\-Z0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a08d61e52b319ba0ec6f5a99fe8b8ae60}
+
+
+References lcfiplus\-::tpar\-::z0.
+
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), lcfiplus\-::\-Helix\-::\-Helix(), Kal\-Trk\-::\-Kal\-Trk(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Sort\-Tracks\-By\-I\-P\-Sig\-::operator()(), lcfiplus\-::\-Track\-Selector\-::passes\-Cut(), lcfiplus\-::\-Test\-Algo\-::process(), lcfiplus\-::\-Vertex\-Analysis\-::process(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0(), lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Electron\-Finder(), lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Muon\-Finder(), and test\-Suehara().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!momentum\-At\-Vertex@{momentum\-At\-Vertex}}
+\index{momentum\-At\-Vertex@{momentum\-At\-Vertex}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{momentum\-At\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}T\-Vector3 lcfiplus\-::\-Track\-::momentum\-At\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{vtx}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Track_accead05104bd3ade2fa806800b96bd82}
+
+
+References lcfiplus\-::\-Vertex\-::get\-Pos(), lcfiplus\-::\-Helix\-::\-Get\-Pos\-Deriv\-T(), lcfiplus\-::\-Helix\-::\-Log\-Likelihood(), and lcfiplus\-::\-Point\-Base\-::\-S\-E\-C\-V\-T\-X.
+
+
+
+Referenced by lcfiplus\-::\-Test\-Algo\-V0\-::process().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-B\-Ness@{set\-B\-Ness}}
+\index{set\-B\-Ness@{set\-B\-Ness}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-B\-Ness}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-B\-Ness (
+\begin{DoxyParamCaption}
+\item[{double}]{bness}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a9155bfec71c06d1078ba62e8f43ab8ed}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Calo\-Edep@{set\-Calo\-Edep}}
+\index{set\-Calo\-Edep@{set\-Calo\-Edep}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Calo\-Edep}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Calo\-Edep (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{calo}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a3169f8ad225877e77eafd037822b0313}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Charge@{set\-Charge}}
+\index{set\-Charge@{set\-Charge}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Charge}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Charge (
+\begin{DoxyParamCaption}
+\item[{double}]{charge}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_aecae9a848e41d621db9401736f845ca0}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Chi2@{set\-Chi2}}
+\index{set\-Chi2@{set\-Chi2}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Chi2}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Chi2 (
+\begin{DoxyParamCaption}
+\item[{double}]{chi2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a23acdcbe000c36817c6ed3142ae9766a}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-C\-Ness@{set\-C\-Ness}}
+\index{set\-C\-Ness@{set\-C\-Ness}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-C\-Ness}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-C\-Ness (
+\begin{DoxyParamCaption}
+\item[{double}]{cness}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_ae5d693a15d046637baa73dc41030b815}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Corr\-Energy@{set\-Corr\-Energy}}
+\index{set\-Corr\-Energy@{set\-Corr\-Energy}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Corr\-Energy}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Corr\-Energy (
+\begin{DoxyParamCaption}
+\item[{double}]{mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a409746053147dc1b271018a2985dd0a5}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Cov\-Matrix@{set\-Cov\-Matrix}}
+\index{set\-Cov\-Matrix@{set\-Cov\-Matrix}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Cov\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Cov\-Matrix (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{cov}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Track_a72086a825c760a5910f794b8b8ee0ec1}
+
+
+References lcfiplus\-::tpar\-::cov\-N.
+
+
+
+Referenced by lcfiplus\-::algo\-Etc\-::make\-Beam\-Tracks().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Flight\-Length@{set\-Flight\-Length}}
+\index{set\-Flight\-Length@{set\-Flight\-Length}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Flight\-Length}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Flight\-Length (
+\begin{DoxyParamCaption}
+\item[{double}]{flt}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a632d9803f54b54bb235ffc2c210244f7}
+
+
+Referenced by lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0(), lcfiplus\-::algo\-Sig\-Prob\-::track\-D0\-Significance(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-Z0\-Significance().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Helix@{set\-Helix}}
+\index{set\-Helix@{set\-Helix}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Helix}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Helix (
+\begin{DoxyParamCaption}
+\item[{double}]{d0, }
+\item[{double}]{z0, }
+\item[{double}]{phi, }
+\item[{double}]{omega, }
+\item[{double}]{tan\-Lambda}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a452db77ca4bb44524d5123673851b27f}
+
+
+References lcfiplus\-::tpar\-::d0, lcfiplus\-::tpar\-::om, lcfiplus\-::tpar\-::ph, lcfiplus\-::tpar\-::td, and lcfiplus\-::tpar\-::z0.
+
+
+
+Referenced by lcfiplus\-::algo\-Etc\-::make\-Beam\-Tracks().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Helix@{set\-Helix}}
+\index{set\-Helix@{set\-Helix}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Helix}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Helix (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{par}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_ab08489e2768f3a28b23f07d0efd87c99}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Id@{set\-Id}}
+\index{set\-Id@{set\-Id}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_ae5bb01de5de6e50f97f270dc97b5ea71}
+
+
+Referenced by lcfiplus\-::algo\-Etc\-::make\-Beam\-Tracks(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Set\-Event().
+
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Mcp@{set\-Mcp}}
+\index{set\-Mcp@{set\-Mcp}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Mcp}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Mcp (
+\begin{DoxyParamCaption}
+\item[{const {\bf lcfiplus\-::\-M\-C\-Particle} $\ast$}]{mcp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_aa1b9be7877b2e80fc6567bed4c2111b3}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Ndf@{set\-Ndf}}
+\index{set\-Ndf@{set\-Ndf}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Ndf}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Ndf (
+\begin{DoxyParamCaption}
+\item[{int}]{ndf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_aedf4344830e41b92dc7cfb28e2485487}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Particle\-I\-D\-Probability@{set\-Particle\-I\-D\-Probability}}
+\index{set\-Particle\-I\-D\-Probability@{set\-Particle\-I\-D\-Probability}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Particle\-I\-D\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Particle\-I\-D\-Probability (
+\begin{DoxyParamCaption}
+\item[{string}]{par\-Name, }
+\item[{double}]{pid\-Probability}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a2fa7de27f822ec6c378283fc8da8ec04}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-P\-D\-G@{set\-P\-D\-G}}
+\index{set\-P\-D\-G@{set\-P\-D\-G}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-P\-D\-G}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-P\-D\-G (
+\begin{DoxyParamCaption}
+\item[{int}]{pdg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a5542fed7e91c27dd3c847af20e8571d5}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Radius\-Of\-Innermost\-Hit@{set\-Radius\-Of\-Innermost\-Hit}}
+\index{set\-Radius\-Of\-Innermost\-Hit@{set\-Radius\-Of\-Innermost\-Hit}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Radius\-Of\-Innermost\-Hit}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Radius\-Of\-Innermost\-Hit (
+\begin{DoxyParamCaption}
+\item[{double}]{rimh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a11ab847ad504bb739e77cd63ed35ea2d}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!set\-Track\-Hits@{set\-Track\-Hits}}
+\index{set\-Track\-Hits@{set\-Track\-Hits}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{set\-Track\-Hits}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::set\-Track\-Hits (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{hits}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a05fbbf86252355b799be89963446e286}
+\index{lcfiplus\-::\-Track@{lcfiplus\-::\-Track}!swap\-Energy@{swap\-Energy}}
+\index{swap\-Energy@{swap\-Energy}!lcfiplus::Track@{lcfiplus\-::\-Track}}
+\subsubsection[{swap\-Energy}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Track\-::swap\-Energy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Track_a17c8c84ff83b4fb347c4e7e973f1769a}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Mass\-Recovery\-::process().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus.\-h}\item 
+{\bf lcfiplus.\-cc}\end{DoxyCompactItemize}

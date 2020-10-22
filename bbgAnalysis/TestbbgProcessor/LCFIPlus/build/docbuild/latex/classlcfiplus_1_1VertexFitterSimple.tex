@@ -1,0 +1,53 @@
+\section{lcfiplus\-:\-:Vertex\-Fitter\-Simple$<$ Iterator $>$ Class Template Reference}
+\label{classlcfiplus_1_1VertexFitterSimple}\index{lcfiplus\-::\-Vertex\-Fitter\-Simple$<$ Iterator $>$@{lcfiplus\-::\-Vertex\-Fitter\-Simple$<$ Iterator $>$}}
+
+
+{\ttfamily \#include $<$Vertex\-Fitter\-Simple.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vertex} $\ast$ {\bf operator()} (Iterator tracks\-Begin, Iterator tracks\-End, {\bf Vertex} $\ast$point\-Constraint=0, bool point\-Initial\-Only=false)
+\item 
+double {\bf get\-Chi2} (const {\bf Vertex} $\ast$vtx, const {\bf Track} $\ast$trk, int mode=1, {\bf Point\-Base\-::\-F\-I\-T\-F\-L\-A\-G} flag={\bf Point\-Base\-::\-N\-O\-T\-U\-S\-E\-D})
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{lcfiplus\-::\-Vertex\-Fitter\-Simple@{lcfiplus\-::\-Vertex\-Fitter\-Simple}!get\-Chi2@{get\-Chi2}}
+\index{get\-Chi2@{get\-Chi2}!lcfiplus::VertexFitterSimple@{lcfiplus\-::\-Vertex\-Fitter\-Simple}}
+\subsubsection[{get\-Chi2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Iterator $>$ double {\bf lcfiplus\-::\-Vertex\-Fitter\-Simple}$<$ Iterator $>$\-::get\-Chi2 (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{vtx, }
+\item[{const {\bf Track} $\ast$}]{trk, }
+\item[{int}]{mode = {\ttfamily 1}, }
+\item[{{\bf Point\-Base\-::\-F\-I\-T\-F\-L\-A\-G}}]{flag = {\ttfamily {\bf Point\-Base\-::\-N\-O\-T\-U\-S\-E\-D}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1VertexFitterSimple_a4f2e79e62de14a322f54371d25b539eb}
+
+
+References lcfiplus\-::\-Point\-::\-Get\-Pos(), lcfiplus\-::\-Vertex\-::get\-Pos(), lcfiplus\-::\-Vertex\-::get\-Tracks(), lcfiplus\-::\-Helix\-::\-Log\-Likelihood(), and lcfiplus\-::\-Geometry\-Handler\-::\-Point\-Fit().
+
+
+
+Referenced by lcfiplus\-::\-Vertex\-::get\-Chi2\-Track\-Fit().
+
+\index{lcfiplus\-::\-Vertex\-Fitter\-Simple@{lcfiplus\-::\-Vertex\-Fitter\-Simple}!operator()@{operator()}}
+\index{operator()@{operator()}!lcfiplus::VertexFitterSimple@{lcfiplus\-::\-Vertex\-Fitter\-Simple}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Iterator $>$ {\bf Vertex}$\ast$ {\bf lcfiplus\-::\-Vertex\-Fitter\-Simple}$<$ Iterator $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{Iterator}]{tracks\-Begin, }
+\item[{Iterator}]{tracks\-End, }
+\item[{{\bf Vertex} $\ast$}]{point\-Constraint = {\ttfamily 0}, }
+\item[{bool}]{point\-Initial\-Only = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1VertexFitterSimple_abf4bc62e8e01136aaf53ea3a25f15c34}
+
+
+References lcfiplus\-::\-Vertex\-::add(), lcfiplus\-::\-Point\-::\-Get\-Err(), lcfiplus\-::\-Point\-::\-Get\-Pos(), lcfiplus\-::\-Geometry\-Handler\-::\-Helix\-Point\-Fit(), lcfiplus\-::\-Helix\-::\-Log\-Likelihood(), lcfiplus\-::\-Geometry\-Handler\-::\-Point\-Fit(), and lcfiplus\-::verbose.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Vertex\-Fitter\-Simple.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,178 @@
+\section{lcfiplus\-:\-:Parameters Class Reference}
+\label{classlcfiplus_1_1Parameters}\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}}
+
+
+{\ttfamily \#include $<$lcfiplus.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Parameters} (bool as=true)
+\item 
+{\bf $\sim$\-Parameters} ()
+\item 
+{\bf Parameters} (const {\bf Parameters} \&ref)
+\item 
+{\bf Parameters} \& {\bf operator=} (const {\bf Parameters} \&ref)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bf fetch} (const char $\ast$key, T \&ret, T def=T()) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bf fetch\-Array} (const char $\ast$key, vector$<$ T $>$ \&ret) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\T {\bf get} (const char $\ast$key, T def=T()) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::vector$<$ T $>$ {\bf get\-Vec} (const char $\ast$key) const 
+\item 
+bool {\bf exist} (const char $\ast$key) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bf add} (const char $\ast$key, T data)
+\item 
+void {\bf remove} (const char $\ast$key)
+\item 
+void {\bf clear} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\void {\bf assign} (const char $\ast$key, T data)
+\item 
+const map$<$ string, pair$<$ const \\*
+type\-\_\-info $\ast$, void $\ast$ $>$ $>$ \& {\bf param\-Map} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{Parameters}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Parameters\-::\-Parameters (
+\begin{DoxyParamCaption}
+\item[{bool}]{as = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a6477747e2ec38ec165df21b106b17ed4}
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!$\sim$\-Parameters@{$\sim$\-Parameters}}
+\index{$\sim$\-Parameters@{$\sim$\-Parameters}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{$\sim$\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Parameters\-::$\sim$\-Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a05a4af1fa750b3d8ae18d6d56eda7b5e}
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{Parameters}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Parameters\-::\-Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parameters} \&}]{ref}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a14987ec824053706cb494a3f4c573587}
+
+
+\subsection{Member Function Documentation}
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!add@{add}}
+\index{add@{add}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void lcfiplus\-::\-Parameters\-::add (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{T}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a72360e493087ca775163442c63b5cab7}
+
+
+Referenced by Lcfiplus\-Processor\-::init(), operator=(), lcfiplus\-::\-Jet\-Clustering\-::process(), lcfiplus\-::\-F\-T\-Manager\-::process(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Read\-Jets().
+
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!assign@{assign}}
+\index{assign@{assign}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{assign}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void lcfiplus\-::\-Parameters\-::assign (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{T}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a914dd51a8f56ef674b8becf1cfb6b0e5}
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!clear@{clear}}
+\index{clear@{clear}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Parameters\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Parameters_abcb5934a6f3d284892b3c1fe6890776e}
+
+
+Referenced by operator=().
+
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!exist@{exist}}
+\index{exist@{exist}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{exist}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-Parameters\-::exist (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a0b23f9f8ac82f423fd4ad17309a01284}
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!fetch@{fetch}}
+\index{fetch@{fetch}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{fetch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void lcfiplus\-::\-Parameters\-::fetch (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{T \&}]{ret, }
+\item[{T}]{def = {\ttfamily T()}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a81c851d364c0eb9745dc05cd40700c58}
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!fetch\-Array@{fetch\-Array}}
+\index{fetch\-Array@{fetch\-Array}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{fetch\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void lcfiplus\-::\-Parameters\-::fetch\-Array (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{vector$<$ T $>$ \&}]{ret}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a9ad3a641e76441c3fe21e8b745532967}
+
+
+Referenced by lcfiplus\-::\-Train\-M\-V\-A\-::init(), lcfiplus\-::\-Read\-M\-V\-A\-::init(), and lcfiplus\-::\-Jet\-Clustering\-::init().
+
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!get@{get}}
+\index{get@{get}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T lcfiplus\-::\-Parameters\-::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{T}]{def = {\ttfamily T()}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a77b8fe3d591fc55896df16b45ab0ca25}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Mass\-Recovery\-::init(), lcfiplus\-::\-Primary\-Vertex\-Finder\-::init(), lcfiplus\-::\-Make\-Ntuple\-::init(), lcfiplus\-::\-Train\-M\-V\-A\-::init(), lcfiplus\-::\-Vertex\-Ntuple\-::init(), lcfiplus\-::\-Track\-Ntuple\-::init(), lcfiplus\-::\-Read\-M\-V\-A\-::init(), lcfiplus\-::\-Flavor\-Tag\-::init(), lcfiplus\-::\-Build\-Up\-Vertex\-::init(), lcfiplus\-::\-Jet\-Clustering\-::init(), lcfiplus\-::\-Jet\-Vertex\-Refiner\-::init(), lcfiplus\-::\-Z\-H\-H\-Algo\-::init(), lcfiplus\-::\-Test\-Algo\-::init(), lcfiplus\-::\-Vertex\-Analysis\-::init(), lcfiplus\-::\-Flavtag\-Reader\-::init(), lcfiplus\-::\-Test\-Algo\-V0\-::init(), lcfiplus\-::\-Z\-H\-H\-Algo\-::process(), lcfiplus\-::\-Flavtag\-Reader\-::process(), lcfiplus\-::\-Z\-H\-H\-Algo\-::sort\-Btag(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-P\-I\-D().
+
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!get\-Vec@{get\-Vec}}
+\index{get\-Vec@{get\-Vec}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{get\-Vec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::vector$<$T$>$ lcfiplus\-::\-Parameters\-::get\-Vec (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a01b994e5efa1d5a7a4b0dfdb015bdf5f}
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!operator=@{operator=}}
+\index{operator=@{operator=}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameters} \& lcfiplus\-::\-Parameters\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parameters} \&}]{ref}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Parameters_ab1ff29728d805f7dac49233261fe10d1}
+
+
+References add(), and clear().
+
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!param\-Map@{param\-Map}}
+\index{param\-Map@{param\-Map}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{param\-Map}]{\setlength{\rightskip}{0pt plus 5cm}const map$<$string, pair$<$const type\-\_\-info$\ast$, void$\ast$$>$ $>$\& lcfiplus\-::\-Parameters\-::param\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a0af17b91ba9b9ed71e6e5186edc0a1d5}
+
+
+Referenced by lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-P\-I\-D().
+
+\index{lcfiplus\-::\-Parameters@{lcfiplus\-::\-Parameters}!remove@{remove}}
+\index{remove@{remove}!lcfiplus::Parameters@{lcfiplus\-::\-Parameters}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Parameters\-::remove (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Parameters_a87390bb27075c4c6e382044dcb9cc510}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus.\-h}\item 
+{\bf lcfiplus.\-cc}\end{DoxyCompactItemize}

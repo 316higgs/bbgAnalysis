@@ -1,0 +1,317 @@
+\section{lcfiplus\-:\-:Jet Class Reference}
+\label{classlcfiplus_1_1Jet}\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}}
+
+
+{\ttfamily \#include $<$lcfiplus.\-h$>$}
+
+Inheritance diagram for lcfiplus\-:\-:Jet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlcfiplus_1_1Jet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Jet} ()
+\item 
+{\bf Jet} (const {\bf Track} $\ast$trk)
+\item 
+{\bf Jet} (const {\bf Neutral} $\ast$neutral)
+\item 
+{\bf Jet} (const {\bf Vertex} $\ast$vtx)
+\item 
+{\bf Jet} (const {\bf Jet} \&from, bool extract\-Vertex=false)
+\item 
+{\bf $\sim$\-Jet} ()
+\item 
+void {\bf set\-Id} (int id) const 
+\item 
+int {\bf get\-Id} () const 
+\item 
+const vector$<$ const {\bf Track} $\ast$ $>$ \& {\bf get\-Tracks} () const 
+\item 
+const vector$<$ const {\bf Neutral} $\ast$ $>$ \& {\bf get\-Neutrals} () const 
+\item 
+const vector$<$ const {\bf Vertex} $\ast$ $>$ \& {\bf get\-Vertices} () const 
+\item 
+vector$<$ const {\bf Vertex} $\ast$ $>$ {\bf get\-Vertices\-For\-F\-T} () const 
+\begin{DoxyCompactList}\small\item\em returns list of vertices which are useful for flavor tagging. \end{DoxyCompactList}\item 
+vector$<$ const {\bf Track} $\ast$ $>$ {\bf get\-All\-Tracks} (bool without\-V0=false) const 
+\begin{DoxyCompactList}\small\item\em returns list of all tracks including those used to form vertices. \end{DoxyCompactList}\item 
+void {\bf add} (const {\bf Jet} \&jet)
+\item 
+void {\bf add} (const {\bf Track} $\ast$trk)
+\item 
+void {\bf add} (const {\bf Neutral} $\ast$neut)
+\item 
+void {\bf add} (const {\bf Vertex} $\ast$vtx, bool remove\-Tracks=true)
+\item 
+double {\bf sphericity} () const 
+\item 
+void {\bf add\-Param} (const char $\ast$paramname, {\bf Parameters} \&param) const 
+\item 
+const {\bf Parameters} $\ast$ {\bf get\-Param} (const char $\ast$paramname) const 
+\item 
+const map$<$ string, {\bf Parameters} $>$ \& {\bf params} () const 
+\item 
+void {\bf recalc\-Four\-Momentum} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bf sort\-\_\-by\-\_\-energy} (const {\bf Jet} $\ast$a, const {\bf Jet} $\ast$b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!Jet@{Jet}}
+\index{Jet@{Jet}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{Jet}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Jet\-::\-Jet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a773e9c6e9ec95546ac65849135b80b2a}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!Jet@{Jet}}
+\index{Jet@{Jet}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{Jet}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Jet\-::\-Jet (
+\begin{DoxyParamCaption}
+\item[{const {\bf Track} $\ast$}]{trk}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Jet_ad8a3a6421e868cfa94b48f7595073e34}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!Jet@{Jet}}
+\index{Jet@{Jet}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{Jet}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Jet\-::\-Jet (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neutral} $\ast$}]{neutral}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Jet_ac35f1ebf53f4e31f1d221f20a051a839}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!Jet@{Jet}}
+\index{Jet@{Jet}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{Jet}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Jet\-::\-Jet (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{vtx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a32146fc642e5b041e40e1c1d9a0c24eb}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!Jet@{Jet}}
+\index{Jet@{Jet}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{Jet}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Jet\-::\-Jet (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jet} \&}]{from, }
+\item[{bool}]{extract\-Vertex = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Jet_ac5150063880d8f0f055e2828d5b8865d}
+
+
+References get\-Neutrals(), get\-Tracks(), get\-Vertices(), and params().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!$\sim$\-Jet@{$\sim$\-Jet}}
+\index{$\sim$\-Jet@{$\sim$\-Jet}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{$\sim$\-Jet}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Jet\-::$\sim$\-Jet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a8c1bc72baa4f4ee81e562f1d531e007b}
+
+
+\subsection{Member Function Documentation}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!add@{add}}
+\index{add@{add}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Jet\-::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jet} \&}]{jet}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Jet_a110d79a192b14781d818fbebb386af44}
+
+
+References get\-Neutrals(), get\-Tracks(), and get\-Vertices().
+
+
+
+Referenced by lcfiplus\-::convert\-Jet\-Vertex(), find\-Additional\-Vertices(), match\-Mc\-Vertex(), lcfiplus\-::\-Jet\-Finder\-::prerun(), lcfiplus\-::\-Vertex\-Mass\-Recovery\-::process(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Read\-Jets().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!add@{add}}
+\index{add@{add}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Jet\-::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Track} $\ast$}]{trk}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a081c8fac6f644bb9a114da705ba3f2b9}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!add@{add}}
+\index{add@{add}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Jet\-::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neutral} $\ast$}]{neut}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a556ef122a6ffb3b56dc4b7131e9ffc8a}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!add@{add}}
+\index{add@{add}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Jet\-::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{vtx, }
+\item[{bool}]{remove\-Tracks = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a85e856f5747e87812827e30f9a6ace1f}
+
+
+References lcfiplus\-::\-Vertex\-::get\-Tracks().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!add\-Param@{add\-Param}}
+\index{add\-Param@{add\-Param}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{add\-Param}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Jet\-::add\-Param (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{paramname, }
+\item[{{\bf Parameters} \&}]{param}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a34d4b32d5ab31c4edda9a6db9b13584b}
+
+
+Referenced by lcfiplus\-::\-Jet\-Clustering\-::process(), lcfiplus\-::\-F\-T\-Manager\-::process(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Read\-Jets().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!get\-All\-Tracks@{get\-All\-Tracks}}
+\index{get\-All\-Tracks@{get\-All\-Tracks}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{get\-All\-Tracks}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ const {\bf Track} $\ast$ $>$ lcfiplus\-::\-Jet\-::get\-All\-Tracks (
+\begin{DoxyParamCaption}
+\item[{bool}]{without\-V0 = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Jet_a03264df9bd1c3c1cbd58a760b71acb96}
+
+
+returns list of all tracks including those used to form vertices. 
+
+if without\-V0 is true, skip tracks which are identified as v0 (default\-: false) 
+
+References lcfiplus\-::\-Event\-::get\-Primary\-Vertex(), lcfiplus\-::\-Vertex\-::get\-Tracks(), get\-Tracks(), get\-Vertices(), lcfiplus\-::\-Event\-::\-Instance(), and lcfiplus\-::\-Vertex\-::passes\-V0selection().
+
+
+
+Referenced by lcfiplus\-::algo\-Sig\-Prob\-::find\-Most\-Significant\-Track(), lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob2\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob2\-Z0(), lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob\-Z0(), lcfiplus\-::\-Track\-Ntuple\-::process(), lcfiplus\-::\-Z\-H\-H\-Algo\-::process(), lcfiplus\-::\-Test\-Algo\-::process(), and sphericity().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Jet\-::get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a59d99a7ad1cbd990731e9bee767618af}
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!get\-Neutrals@{get\-Neutrals}}
+\index{get\-Neutrals@{get\-Neutrals}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{get\-Neutrals}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$const {\bf Neutral}$\ast$$>$\& lcfiplus\-::\-Jet\-::get\-Neutrals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_ad5c0341e122c6cdbe29bac01ea4825a1}
+
+
+Referenced by add(), lcfiplus\-::convert\-Jet\-Vertex(), Jet(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-Jets().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!get\-Param@{get\-Param}}
+\index{get\-Param@{get\-Param}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{get\-Param}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Parameters}$\ast$ lcfiplus\-::\-Jet\-::get\-Param (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{paramname}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a7821e2bdec81449f6aef06c394119dc0}
+
+
+Referenced by lcfiplus\-::\-Z\-H\-H\-Algo\-::process(), lcfiplus\-::\-Flavtag\-Reader\-::process(), lcfiplus\-::\-Z\-H\-H\-Algo\-::sort\-Btag(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-P\-I\-D().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!get\-Tracks@{get\-Tracks}}
+\index{get\-Tracks@{get\-Tracks}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{get\-Tracks}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$const {\bf Track}$\ast$$>$\& lcfiplus\-::\-Jet\-::get\-Tracks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a311a992b6a1d15cd91fb2c3cceaf61e6}
+
+
+Referenced by add(), lcfiplus\-::convert\-Jet\-Vertex(), find\-Additional\-Vertices(), lcfiplus\-::\-Lcfi\-Interface\-::find\-Secondary\-Vertices(), find\-Single\-Tracks(), lcfiplus\-::find\-Tear\-Down\-Vertices(), lcfiplus\-::\-Lcfi\-Interface\-::force\-Zvtop(), get\-All\-Tracks(), Jet(), lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob2\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob2\-Z0(), lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob\-Z0(), match\-Mc\-Vertex\-Jet(), test\-Suehara(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-Jets().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!get\-Vertices@{get\-Vertices}}
+\index{get\-Vertices@{get\-Vertices}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{get\-Vertices}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$const {\bf Vertex}$\ast$$>$\& lcfiplus\-::\-Jet\-::get\-Vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_ab4fdac5765ee5a453cc56dd7835b41d9}
+
+
+Referenced by add(), lcfiplus\-::convert\-Jet\-Vertex(), lcfiplus\-::\-Jet\-Finder\-::func\-Vertex(), get\-All\-Tracks(), get\-Vertices\-For\-F\-T(), Jet(), lcfiplus\-::\-Jet\-Finder\-::prerun(), lcfiplus\-::\-Vertex\-Ntuple\-::process(), lcfiplus\-::\-Z\-H\-H\-Algo\-::process(), lcfiplus\-::\-Test\-Algo\-::process(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-Jets().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!get\-Vertices\-For\-F\-T@{get\-Vertices\-For\-F\-T}}
+\index{get\-Vertices\-For\-F\-T@{get\-Vertices\-For\-F\-T}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{get\-Vertices\-For\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ const {\bf Vertex} $\ast$ $>$ lcfiplus\-::\-Jet\-::get\-Vertices\-For\-F\-T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Jet_a02d772c6ab7f6b338fea85d6b84a24df}
+
+
+returns list of vertices which are useful for flavor tagging. 
+
+
+
+References lcfiplus\-::\-Vertex\-::dist\-\_\-sort(), lcfiplus\-::\-Vertex\-::get\-Tracks(), and get\-Vertices().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!params@{params}}
+\index{params@{params}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{params}]{\setlength{\rightskip}{0pt plus 5cm}const map$<$string, {\bf Parameters}$>$\& lcfiplus\-::\-Jet\-::params (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a94eeb5cbe645e09a1f59e6526797f1a5}
+
+
+Referenced by Jet(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-All\-P\-I\-Ds().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!recalc\-Four\-Momentum@{recalc\-Four\-Momentum}}
+\index{recalc\-Four\-Momentum@{recalc\-Four\-Momentum}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{recalc\-Four\-Momentum}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Jet\-::recalc\-Four\-Momentum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a38baabc1a6078719c15eba82f0ed16d9}
+
+
+Referenced by lcfiplus\-::\-Z\-H\-H\-Algo\-::process().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!set\-Id@{set\-Id}}
+\index{set\-Id@{set\-Id}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{set\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Jet\-::set\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Jet_a406b27bd46642c497deddab11dfb3847}
+
+
+Referenced by lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Read\-Jets(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-Jets().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!sort\-\_\-by\-\_\-energy@{sort\-\_\-by\-\_\-energy}}
+\index{sort\-\_\-by\-\_\-energy@{sort\-\_\-by\-\_\-energy}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{sort\-\_\-by\-\_\-energy}]{\setlength{\rightskip}{0pt plus 5cm}static int lcfiplus\-::\-Jet\-::sort\-\_\-by\-\_\-energy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Jet} $\ast$}]{a, }
+\item[{const {\bf Jet} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classlcfiplus_1_1Jet_abbcdeb3cc9261f71d35cf9c0cbea4cf2}
+
+
+Referenced by lcfiplus\-::\-Jet\-Finder\-::run().
+
+\index{lcfiplus\-::\-Jet@{lcfiplus\-::\-Jet}!sphericity@{sphericity}}
+\index{sphericity@{sphericity}!lcfiplus::Jet@{lcfiplus\-::\-Jet}}
+\subsubsection[{sphericity}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Jet\-::sphericity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Jet_a2c06ee9b25312e45e9a6e2255fb271f2}
+
+
+References get\-All\-Tracks().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus.\-h}\item 
+{\bf lcfiplus.\-cc}\end{DoxyCompactItemize}

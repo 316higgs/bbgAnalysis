@@ -1,0 +1,51 @@
+\section{Vertex\-Finder\-Suehara.\-h File Reference}
+\label{VertexFinderSuehara_8h}\index{Vertex\-Finder\-Suehara.\-h@{Vertex\-Finder\-Suehara.\-h}}
+{\ttfamily \#include \char`\"{}lcfiplus.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include \char`\"{}algo\-Sig\-Prob.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Vertex\-Selector.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Sort\-Tracks\-By\-I\-P\-Sig}
+\item 
+class {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Vertex\-Finder\-Suehara\-Config}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus}
+\item 
+{\bf lcfiplus\-::\-Vertex\-Finder\-Suehara}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Vertex\-Nearer} (const {\bf Vertex} $\ast$vtx1, const {\bf Vertex} $\ast$vtx2)
+\item 
+bool {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Vertex\-Prob\-Larger} (const {\bf Vertex} $\ast$vtx1, const {\bf Vertex} $\ast$vtx2)
+\item 
+void {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List} (list$<$ const {\bf Track} $\ast$ $>$ \&tracks, const {\bf Vertex} $\ast$ip, vector$<$ {\bf Vertex} $\ast$ $>$ \&vtx, vector$<$ {\bf Vertex} $\ast$ $>$ \&v0vtx, {\bf Vertex\-Finder\-Suehara\-Config} \&cfg)
+\item 
+{\bf lcfiplus\-::\-Vertex} $\ast$ {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::associate\-Tracks} ({\bf Vertex} $\ast$vertex, const {\bf Vertex\-Vec} \&v0vtx, list$<$ const {\bf Track} $\ast$ $>$ \&tracks, {\bf Vertex\-Finder\-Suehara\-Config} \&cfg, list$<$ const {\bf Track} $\ast$ $>$ $\ast$residual\-Tracks=0)
+\item 
+void {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::associate\-I\-P\-Tracks} (vector$<$ {\bf Vertex} $\ast$ $>$ \&vertices, {\bf Vertex} $\ast$ip, {\bf Vertex\-Finder\-Suehara\-Config} \&cfg)
+\item 
+void {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::associate\-I\-P\-Tracks\-A\-V\-F} (vector$<$ {\bf Vertex} $\ast$ $>$ \&vertices, {\bf Vertex} $\ast$ip, {\bf Vertex\-Finder\-Suehara\-Config} \&cfg)
+\item 
+void {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::build\-Up} ({\bf Track\-Vec} \&tracks, vector$<$ {\bf Vertex} $\ast$ $>$ \&vtx, vector$<$ {\bf Vertex} $\ast$ $>$ \&v0vtx, double chi2thpri, {\bf Vertex\-Finder\-Suehara\-Config} \&cfg, {\bf Vertex} $\ast$$\ast$ip=0)
+\item 
+void {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::build\-Up\-For\-Jet\-Clustering} ({\bf Track\-Vec} \&tracks, vector$<$ {\bf Vertex} $\ast$ $>$ \&vtx)
+\item 
+vector$<$ {\bf Vertex} $\ast$ $>$ {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::make\-Single\-Track\-Vertices} ({\bf Vertex\-Vec} \&vtcs, {\bf Track\-Vec} \&tracks, {\bf Vertex\-Vec} \&v0vtx, const {\bf Vertex} $\ast$ip, {\bf Vertex\-Finder\-Suehara\-Config} \&cfg)
+\item 
+vector$<$ {\bf Vertex} $\ast$ $>$ {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::make\-Single\-Track\-Vertices} ({\bf Jet} $\ast$jet, {\bf Track\-Vec} \&tracks, {\bf Vertex\-Vec} \&v0vtx, const {\bf Vertex} $\ast$ip, {\bf Vertex\-Finder\-Suehara\-Config} \&cfg)
+\item 
+void {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::recombine\-Vertices} (vector$<$ {\bf Vertex} $\ast$ $>$ \&vertices, vector$<$ {\bf Vertex} $\ast$ $>$ \&single\-Vertices)
+\item 
+void {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::recombine\-Vertices} (vector$<$ {\bf Vertex} $\ast$ $>$ \&vertices, vector$<$ {\bf Vertex} $\ast$ $>$ \&single\-Vertices, {\bf Vertex\-Finder\-Suehara\-Config} \&cfg)
+\item 
+void {\bf lcfiplus\-::\-Vertex\-Finder\-Suehara\-::optimize\-Two\-Vertices} ({\bf Vertex} $\ast$\&v1, {\bf Vertex} $\ast$\&v2, int nvr)
+\end{DoxyCompactItemize}

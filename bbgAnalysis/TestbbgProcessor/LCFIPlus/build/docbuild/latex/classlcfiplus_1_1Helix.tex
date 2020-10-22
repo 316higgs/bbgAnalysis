@@ -1,0 +1,467 @@
+\section{lcfiplus\-:\-:Helix Class Reference}
+\label{classlcfiplus_1_1Helix}\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}}
+
+
+{\ttfamily \#include $<$geometry.\-h$>$}
+
+Inheritance diagram for lcfiplus\-:\-:Helix\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlcfiplus_1_1Helix}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Helix\-Line\-Distance2\-Deriv\-Functor}
+\item 
+class {\bf Helix\-Line\-Distance2\-Functor}
+\item 
+class {\bf Variance\-Deriv\-Functor}
+\item 
+class {\bf Variance\-Functor}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf par} \{ \\*
+{\bf id0} =0, 
+{\bf iz0}, 
+{\bf iph}, 
+{\bf iom}, 
+\\*
+{\bf itd}, 
+{\bf par\-N}
+ \}
+\item 
+typedef R\-O\-O\-T\-::\-Math\-::\-S\-Vector\\*
+$<$ double, 5 $>$ {\bf S\-Vector5}
+\item 
+typedef R\-O\-O\-T\-::\-Math\-::\-S\-Vector\\*
+$<$ double, 3 $>$ {\bf S\-Vector3}
+\item 
+typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix\\*
+$<$ double, \\*
+5, 5, R\-O\-O\-T\-::\-Math\-::\-Mat\-Rep\-Sym\\*
+$<$ double, 5 $>$ $>$ {\bf S\-Matrix\-Sym5}
+\item 
+typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix\\*
+$<$ double, 5, 3 $>$ {\bf S\-Matrix53}
+\item 
+typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix\\*
+$<$ double, 3, 5 $>$ {\bf S\-Matrix35}
+\item 
+typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix\\*
+$<$ double, \\*
+3, 3, R\-O\-O\-T\-::\-Math\-::\-Mat\-Rep\-Sym\\*
+$<$ double, 3 $>$ $>$ {\bf S\-Matrix\-Sym3}
+\item 
+typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix\\*
+$<$ double, 3, 3 $>$ {\bf S\-Matrix3}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double {\bf Log\-Likelihood} (const T\-Vector3 \&p) const 
+\item 
+double {\bf Log\-Likelihood} (const T\-Vector3 \&p, double \&tmin) const 
+\item 
+void {\bf Log\-Likelihood\-Deriv} (const T\-Vector3 \&p, double $\ast$output) const 
+\item 
+double {\bf Variance} (const T\-Vector3 \&p, double t) const 
+\item 
+double {\bf Variance\-Deriv} (const T\-Vector3 \&p, double t) const 
+\item 
+double {\bf Variance\-Deriv2} (const T\-Vector3 \&p, double t) const 
+\item 
+T\-Vector3 {\bf Get\-Pos} (double t) const 
+\item 
+T\-Vector3 {\bf Get\-Pos\-Deriv\-T} (double t) const 
+\item 
+void {\bf Get\-Pos\-Err} (double t, {\bf S\-Vector3} \&pos, {\bf S\-Matrix\-Sym3} \&err) const 
+\item 
+void {\bf Get\-Pos\-Err} (double t, {\bf S\-Vector3} \&pos, {\bf S\-Matrix\-Sym3} \&err, {\bf S\-Matrix53} \&track\-To\-Xyz) const 
+\item 
+void {\bf Get\-Pos\-Err\-Deriv} (double t, {\bf S\-Vector3} \&pos, {\bf S\-Matrix\-Sym3} \&err) const 
+\item 
+void {\bf Get\-Pos\-Err\-Deriv2} (double t, {\bf S\-Vector3} \&pos, {\bf S\-Matrix\-Sym3} \&err) const 
+\item 
+double {\bf Longitudinal\-Deviation} (const {\bf Vertex} $\ast$ip, const {\bf Vertex} $\ast$sec)
+\item 
+{\bf Helix} ({\bf F\-I\-T\-F\-L\-A\-G} flag)
+\item 
+{\bf Helix} (const {\bf S\-Vector5} \&hel, const {\bf S\-Matrix\-Sym5} \&err, int charge, {\bf F\-I\-T\-F\-L\-A\-G} flag)
+\item 
+{\bf Helix} (const {\bf Track} $\ast$trk, {\bf F\-I\-T\-F\-L\-A\-G} flag)
+\item 
+{\bf Helix} (const {\bf Helix} \&ref, {\bf F\-I\-T\-F\-L\-A\-G} flag)
+\item 
+{\bf $\sim$\-Helix} ()
+\item 
+void {\bf Get\-Center} (double \&x, double \&y) const 
+\item 
+void {\bf Find\-Z\-Cross} (double x, double y, double \&zi, double \&zp) const 
+\item 
+T\-Vector3 {\bf Close\-Point} (const {\bf Helix} \&hel) const 
+\item 
+T\-Vector3 {\bf Close\-Point} (const {\bf Vertex\-Line} \&line, double $\ast$distance=0) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!S\-Matrix3@{S\-Matrix3}}
+\index{S\-Matrix3@{S\-Matrix3}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{S\-Matrix3}]{\setlength{\rightskip}{0pt plus 5cm}typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix$<$double, 3,3$>$ {\bf lcfiplus\-::\-Helix\-::\-S\-Matrix3}}\label{classlcfiplus_1_1Helix_ab08e423eaa6e6cdec1b4cb5c799628c3}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!S\-Matrix35@{S\-Matrix35}}
+\index{S\-Matrix35@{S\-Matrix35}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{S\-Matrix35}]{\setlength{\rightskip}{0pt plus 5cm}typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix$<$double, 3,5$>$ {\bf lcfiplus\-::\-Helix\-::\-S\-Matrix35}}\label{classlcfiplus_1_1Helix_aaefbb18eac430cd3b3d2d9685f346f28}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!S\-Matrix53@{S\-Matrix53}}
+\index{S\-Matrix53@{S\-Matrix53}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{S\-Matrix53}]{\setlength{\rightskip}{0pt plus 5cm}typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix$<$double, 5,3$>$ {\bf lcfiplus\-::\-Helix\-::\-S\-Matrix53}}\label{classlcfiplus_1_1Helix_a06430615c7b7f6ff1b40dd4dd5e830f8}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!S\-Matrix\-Sym3@{S\-Matrix\-Sym3}}
+\index{S\-Matrix\-Sym3@{S\-Matrix\-Sym3}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{S\-Matrix\-Sym3}]{\setlength{\rightskip}{0pt plus 5cm}typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix$<$double, 3,3,R\-O\-O\-T\-::\-Math\-::\-Mat\-Rep\-Sym$<$double,3$>$ $>$ {\bf lcfiplus\-::\-Helix\-::\-S\-Matrix\-Sym3}}\label{classlcfiplus_1_1Helix_ab9f1353c64128db77b70f320fd9c870b}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!S\-Matrix\-Sym5@{S\-Matrix\-Sym5}}
+\index{S\-Matrix\-Sym5@{S\-Matrix\-Sym5}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{S\-Matrix\-Sym5}]{\setlength{\rightskip}{0pt plus 5cm}typedef R\-O\-O\-T\-::\-Math\-::\-S\-Matrix$<$double, 5,5,R\-O\-O\-T\-::\-Math\-::\-Mat\-Rep\-Sym$<$double,5$>$ $>$ {\bf lcfiplus\-::\-Helix\-::\-S\-Matrix\-Sym5}}\label{classlcfiplus_1_1Helix_a11b506c3ddc0d470cd370c9e2219ecfe}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!S\-Vector3@{S\-Vector3}}
+\index{S\-Vector3@{S\-Vector3}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{S\-Vector3}]{\setlength{\rightskip}{0pt plus 5cm}typedef R\-O\-O\-T\-::\-Math\-::\-S\-Vector$<$double, 3$>$ {\bf lcfiplus\-::\-Helix\-::\-S\-Vector3}}\label{classlcfiplus_1_1Helix_acb35921736ff7a6567717349d822709f}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!S\-Vector5@{S\-Vector5}}
+\index{S\-Vector5@{S\-Vector5}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{S\-Vector5}]{\setlength{\rightskip}{0pt plus 5cm}typedef R\-O\-O\-T\-::\-Math\-::\-S\-Vector$<$double, 5$>$ {\bf lcfiplus\-::\-Helix\-::\-S\-Vector5}}\label{classlcfiplus_1_1Helix_afb66c7d015fcb5f8cd442411015b9559}
+
+
+\subsection{Member Enumeration Documentation}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!par@{par}}
+\index{par@{par}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{par}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf lcfiplus\-::\-Helix\-::par}}\label{classlcfiplus_1_1Helix_a1acd2bbaf4519886cfe1edb5773bb0d6}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{id0@{id0}!lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}}\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!id0@{id0}}\item[{\em 
+id0\label{classlcfiplus_1_1Helix_a1acd2bbaf4519886cfe1edb5773bb0d6a8ad1286efd4e8d9150826e9fd0fd001b}
+}]\index{iz0@{iz0}!lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}}\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!iz0@{iz0}}\item[{\em 
+iz0\label{classlcfiplus_1_1Helix_a1acd2bbaf4519886cfe1edb5773bb0d6a8d359dbd9b708552ce5dc5a5ad0f1d77}
+}]\index{iph@{iph}!lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}}\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!iph@{iph}}\item[{\em 
+iph\label{classlcfiplus_1_1Helix_a1acd2bbaf4519886cfe1edb5773bb0d6ada5da166827b88e2e7efea1a52afbb9f}
+}]\index{iom@{iom}!lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}}\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!iom@{iom}}\item[{\em 
+iom\label{classlcfiplus_1_1Helix_a1acd2bbaf4519886cfe1edb5773bb0d6aa3b6d21f8f8e9db9ed9fdac09c337be5}
+}]\index{itd@{itd}!lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}}\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!itd@{itd}}\item[{\em 
+itd\label{classlcfiplus_1_1Helix_a1acd2bbaf4519886cfe1edb5773bb0d6a9b1ff131165d3a7c55c095542ac9bda7}
+}]\index{par\-N@{par\-N}!lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}}\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!par\-N@{par\-N}}\item[{\em 
+par\-N\label{classlcfiplus_1_1Helix_a1acd2bbaf4519886cfe1edb5773bb0d6a74873dd2c241fe570ddb5b7853391169}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Helix}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Helix\-::\-Helix (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-T\-F\-L\-A\-G}}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Helix_a5d3428d41469b8c10b81deab925c5f3a}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Helix}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Helix\-::\-Helix (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\-Vector5} \&}]{hel, }
+\item[{const {\bf S\-Matrix\-Sym5} \&}]{err, }
+\item[{int}]{charge, }
+\item[{{\bf F\-I\-T\-F\-L\-A\-G}}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Helix_ad4dc0d6540e9b35f7a00a82a387d89c4}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Helix}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Helix\-::\-Helix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Track} $\ast$}]{trk, }
+\item[{{\bf F\-I\-T\-F\-L\-A\-G}}]{flag}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Helix_ab6dc66471362dd8785b1f3ad53c78c2c}
+
+
+References lcfiplus\-::tpar\-::d0d0, lcfiplus\-::tpar\-::d0om, lcfiplus\-::tpar\-::d0ph, lcfiplus\-::tpar\-::d0td, lcfiplus\-::tpar\-::d0z0, lcfiplus\-::\-Track\-::get\-Charge(), lcfiplus\-::\-Track\-::get\-Cov\-Matrix(), lcfiplus\-::\-Track\-::get\-D0(), lcfiplus\-::\-Track\-::get\-Omega(), lcfiplus\-::\-Track\-::get\-Phi(), lcfiplus\-::\-Track\-::get\-Tan\-Lambda(), lcfiplus\-::\-Track\-::get\-Z0(), id0, iom, iph, itd, iz0, lcfiplus\-::tpar\-::omom, lcfiplus\-::tpar\-::omtd, lcfiplus\-::tpar\-::phom, lcfiplus\-::tpar\-::phph, lcfiplus\-::tpar\-::phtd, lcfiplus\-::tpar\-::tdtd, lcfiplus\-::tpar\-::z0om, lcfiplus\-::tpar\-::z0ph, lcfiplus\-::tpar\-::z0td, and lcfiplus\-::tpar\-::z0z0.
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Helix}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Helix\-::\-Helix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Helix} \&}]{ref, }
+\item[{{\bf F\-I\-T\-F\-L\-A\-G}}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Helix_ac6441ec1b78d8874d8b8ccba3a41fdbf}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!$\sim$\-Helix@{$\sim$\-Helix}}
+\index{$\sim$\-Helix@{$\sim$\-Helix}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{$\sim$\-Helix}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Helix\-::$\sim$\-Helix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Helix_a1ca6cb5ce9778ae07a368e7b1d54becd}
+
+
+\subsection{Member Function Documentation}
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Close\-Point@{Close\-Point}}
+\index{Close\-Point@{Close\-Point}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Close\-Point}]{\setlength{\rightskip}{0pt plus 5cm}T\-Vector3 lcfiplus\-::\-Helix\-::\-Close\-Point (
+\begin{DoxyParamCaption}
+\item[{const {\bf Helix} \&}]{hel}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_ab479b82712ae6ecf427596f02eefef8e}
+
+
+References Close\-Point(), Find\-Z\-Cross(), Get\-Center(), iom, Log\-Likelihood(), and lcfiplus\-::verbose.
+
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Suehara\-::associate\-I\-P\-Tracks\-A\-V\-F(), Close\-Point(), and Longitudinal\-Deviation().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Close\-Point@{Close\-Point}}
+\index{Close\-Point@{Close\-Point}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Close\-Point}]{\setlength{\rightskip}{0pt plus 5cm}T\-Vector3 lcfiplus\-::\-Helix\-::\-Close\-Point (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex\-Line} \&}]{line, }
+\item[{double $\ast$}]{distance = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_ae3166656f54cf38bed6d631099c4d462}
+
+
+References Find\-Z\-Cross(), Get\-Center(), Get\-Pos(), iom, itd, iz0, lcfiplus\-::algo\-Etc\-::min(), and lcfiplus\-::verbose.
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Find\-Z\-Cross@{Find\-Z\-Cross}}
+\index{Find\-Z\-Cross@{Find\-Z\-Cross}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Find\-Z\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Helix\-::\-Find\-Z\-Cross (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double \&}]{zi, }
+\item[{double \&}]{zp}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a460e765a368319fd4f9f061bbeead664}
+
+
+References lcfiplus\-::tpar\-::d0, id0, iom, iph, itd, iz0, and lcfiplus\-::tpar\-::z0.
+
+
+
+Referenced by Close\-Point(), and Log\-Likelihood().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Get\-Center@{Get\-Center}}
+\index{Get\-Center@{Get\-Center}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Get\-Center}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Helix\-::\-Get\-Center (
+\begin{DoxyParamCaption}
+\item[{double \&}]{x, }
+\item[{double \&}]{y}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a250dac2e0d19ad48a99a3d5f1665ee99}
+
+
+References lcfiplus\-::tpar\-::d0, id0, iom, and iph.
+
+
+
+Referenced by Close\-Point().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Get\-Pos@{Get\-Pos}}
+\index{Get\-Pos@{Get\-Pos}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}T\-Vector3 lcfiplus\-::\-Helix\-::\-Get\-Pos (
+\begin{DoxyParamCaption}
+\item[{double}]{t}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_ae6cd6034ee839b661d57098372bc147b}
+
+
+References lcfiplus\-::tpar\-::d0, id0, iom, iph, itd, iz0, and lcfiplus\-::tpar\-::z0.
+
+
+
+Referenced by Close\-Point(), and lcfiplus\-::\-Helix\-::\-Helix\-Line\-Distance2\-Functor\-::operator()().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Get\-Pos\-Deriv\-T@{Get\-Pos\-Deriv\-T}}
+\index{Get\-Pos\-Deriv\-T@{Get\-Pos\-Deriv\-T}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Get\-Pos\-Deriv\-T}]{\setlength{\rightskip}{0pt plus 5cm}T\-Vector3 lcfiplus\-::\-Helix\-::\-Get\-Pos\-Deriv\-T (
+\begin{DoxyParamCaption}
+\item[{double}]{t}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a778ec62a857ea4fdeeb62dbc6e0de0e5}
+
+
+References iom, iph, and itd.
+
+
+
+Referenced by lcfiplus\-::\-Track\-::momentum\-At\-Vertex().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Get\-Pos\-Err@{Get\-Pos\-Err}}
+\index{Get\-Pos\-Err@{Get\-Pos\-Err}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Get\-Pos\-Err}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Helix\-::\-Get\-Pos\-Err (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{{\bf S\-Vector3} \&}]{pos, }
+\item[{{\bf S\-Matrix\-Sym3} \&}]{err}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a673078c0cd15c30b81fb0333f13fb9c0}
+
+
+Referenced by Variance(), Variance\-Deriv(), and Variance\-Deriv2().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Get\-Pos\-Err@{Get\-Pos\-Err}}
+\index{Get\-Pos\-Err@{Get\-Pos\-Err}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Get\-Pos\-Err}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Helix\-::\-Get\-Pos\-Err (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{{\bf S\-Vector3} \&}]{pos, }
+\item[{{\bf S\-Matrix\-Sym3} \&}]{err, }
+\item[{{\bf S\-Matrix53} \&}]{track\-To\-Xyz}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a5dc42afe4df0e66d6d9db1df1f3bd0fe}
+
+
+References lcfiplus\-::tpar\-::d0, id0, iom, iph, itd, iz0, and lcfiplus\-::tpar\-::z0.
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Get\-Pos\-Err\-Deriv@{Get\-Pos\-Err\-Deriv}}
+\index{Get\-Pos\-Err\-Deriv@{Get\-Pos\-Err\-Deriv}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Get\-Pos\-Err\-Deriv}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Helix\-::\-Get\-Pos\-Err\-Deriv (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{{\bf S\-Vector3} \&}]{pos, }
+\item[{{\bf S\-Matrix\-Sym3} \&}]{err}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a797fa33bb413b1431adc766e4d2606aa}
+
+
+References lcfiplus\-::tpar\-::d0, id0, iom, iph, itd, iz0, and lcfiplus\-::tpar\-::z0.
+
+
+
+Referenced by Variance\-Deriv(), and Variance\-Deriv2().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Get\-Pos\-Err\-Deriv2@{Get\-Pos\-Err\-Deriv2}}
+\index{Get\-Pos\-Err\-Deriv2@{Get\-Pos\-Err\-Deriv2}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Get\-Pos\-Err\-Deriv2}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Helix\-::\-Get\-Pos\-Err\-Deriv2 (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{{\bf S\-Vector3} \&}]{pos, }
+\item[{{\bf S\-Matrix\-Sym3} \&}]{err}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_ad2980f418729fe1b711a2186170eea0a}
+
+
+References lcfiplus\-::tpar\-::d0, id0, iom, iph, and itd.
+
+
+
+Referenced by Variance\-Deriv2().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Log\-Likelihood@{Log\-Likelihood}}
+\index{Log\-Likelihood@{Log\-Likelihood}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Log\-Likelihood}]{\setlength{\rightskip}{0pt plus 5cm}virtual double lcfiplus\-::\-Helix\-::\-Log\-Likelihood (
+\begin{DoxyParamCaption}
+\item[{const T\-Vector3 \&}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classlcfiplus_1_1Helix_a343c4155e8fa128ee5044c47ad669659}
+
+
+Implements {\bf lcfiplus\-::\-Point\-Base} \doxyref{}{p.}{classlcfiplus_1_1PointBase_ae23cbb155b71a6da8057936384605278}.
+
+
+
+Referenced by Close\-Point(), lcfiplus\-::\-Vertex\-Fitter\-Simple$<$ Iterator $>$\-::get\-Chi2(), lcfiplus\-::\-Track\-::momentum\-At\-Vertex(), and lcfiplus\-::\-Vertex\-Fitter\-Simple$<$ Iterator $>$\-::operator()().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Log\-Likelihood@{Log\-Likelihood}}
+\index{Log\-Likelihood@{Log\-Likelihood}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Log\-Likelihood}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Helix\-::\-Log\-Likelihood (
+\begin{DoxyParamCaption}
+\item[{const T\-Vector3 \&}]{p, }
+\item[{double \&}]{tmin}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a8b75af7fa6e47254784db505cb2f083c}
+
+
+References lcfiplus\-::brent(), lcfiplus\-::dbrent(), Find\-Z\-Cross(), lcfiplus\-::\-Point\-Base\-::\-Get\-Flag(), lcfiplus\-::golden(), iom, itd, iz0, lcfiplus\-::algo\-Etc\-::min(), lcfiplus\-::\-Point\-Base\-::\-P\-R\-I\-V\-T\-X, lcfiplus\-::\-Point\-Base\-::\-S\-E\-C\-V\-T\-X, Variance(), Variance\-Deriv(), Variance\-Deriv2(), lcfiplus\-::verbose, and lcfiplus\-::tpar\-::z0.
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Log\-Likelihood\-Deriv@{Log\-Likelihood\-Deriv}}
+\index{Log\-Likelihood\-Deriv@{Log\-Likelihood\-Deriv}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Log\-Likelihood\-Deriv}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Helix\-::\-Log\-Likelihood\-Deriv (
+\begin{DoxyParamCaption}
+\item[{const T\-Vector3 \&}]{p, }
+\item[{double $\ast$}]{output}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classlcfiplus_1_1Helix_add03199b92ef2bcda96f67e2b29d592c}
+
+
+Implements {\bf lcfiplus\-::\-Point\-Base} \doxyref{}{p.}{classlcfiplus_1_1PointBase_a98789168bf825ba0f4326c7aa0f9a43f}.
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Longitudinal\-Deviation@{Longitudinal\-Deviation}}
+\index{Longitudinal\-Deviation@{Longitudinal\-Deviation}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Longitudinal\-Deviation}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Helix\-::\-Longitudinal\-Deviation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{ip, }
+\item[{const {\bf Vertex} $\ast$}]{sec}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Helix_ad3fb43742e8aa950f41c8efe0abd8f57}
+
+
+References Close\-Point(), lcfiplus\-::\-Point\-::\-Get\-Pos(), lcfiplus\-::\-Vertex\-::get\-Pos(), lcfiplus\-::\-Geometry\-Handler\-::\-Instance(), lcfiplus\-::\-Point\-Base\-::\-N\-O\-T\-U\-S\-E\-D, lcfiplus\-::\-Geometry\-Handler\-::\-Point\-Fit(), lcfiplus\-::\-Point\-Base\-::\-S\-E\-C\-V\-T\-X, and lcfiplus\-::verbose.
+
+
+
+Referenced by lcfiplus\-::\-Ft\-Vtx\-Longitudinal\-Deviation\-::process().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Variance@{Variance}}
+\index{Variance@{Variance}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Variance}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Helix\-::\-Variance (
+\begin{DoxyParamCaption}
+\item[{const T\-Vector3 \&}]{p, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a0bef10db3be527c04fc8e6061f66136f}
+
+
+References Get\-Pos\-Err().
+
+
+
+Referenced by Log\-Likelihood(), and lcfiplus\-::\-Helix\-::\-Variance\-Functor\-::operator()().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Variance\-Deriv@{Variance\-Deriv}}
+\index{Variance\-Deriv@{Variance\-Deriv}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Variance\-Deriv}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Helix\-::\-Variance\-Deriv (
+\begin{DoxyParamCaption}
+\item[{const T\-Vector3 \&}]{p, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_abd2f87150a5eac85771b5029209ccbaf}
+
+
+References Get\-Pos\-Err(), and Get\-Pos\-Err\-Deriv().
+
+
+
+Referenced by Log\-Likelihood(), and lcfiplus\-::\-Helix\-::\-Variance\-Deriv\-Functor\-::operator()().
+
+\index{lcfiplus\-::\-Helix@{lcfiplus\-::\-Helix}!Variance\-Deriv2@{Variance\-Deriv2}}
+\index{Variance\-Deriv2@{Variance\-Deriv2}!lcfiplus::Helix@{lcfiplus\-::\-Helix}}
+\subsubsection[{Variance\-Deriv2}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Helix\-::\-Variance\-Deriv2 (
+\begin{DoxyParamCaption}
+\item[{const T\-Vector3 \&}]{p, }
+\item[{double}]{t}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Helix_a9a92a0770539f20da6f290c3e1b1c6cb}
+
+
+References Get\-Pos\-Err(), Get\-Pos\-Err\-Deriv(), and Get\-Pos\-Err\-Deriv2().
+
+
+
+Referenced by Log\-Likelihood().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf geometry.\-h}\item 
+{\bf geometry.\-cc}\end{DoxyCompactItemize}

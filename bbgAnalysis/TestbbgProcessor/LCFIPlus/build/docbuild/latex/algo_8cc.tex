@@ -1,0 +1,49 @@
+\section{algo.\-cc File Reference}
+\label{algo_8cc}\index{algo.\-cc@{algo.\-cc}}
+{\ttfamily \#include \char`\"{}algo.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}lcfiplus.\-h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf T\-O\-L}~2e-\/4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf lcfiplus\-::powell} (vector$<$ float $>$ p, int n, float ftol, int $\ast$iter, float $\ast$fret, float($\ast$func)(vector$<$ float $>$))
+\item 
+void {\bf lcfiplus\-::linmin} (vector$<$ float $>$ p, vector$<$ float $>$ xi, int n, float $\ast$fret, float($\ast$func)(vector$<$ float $>$))
+\item 
+float {\bf lcfiplus\-::f1dim} (float x)
+\item 
+void {\bf lcfiplus\-::mnbrak} (float $\ast$ax, float $\ast$bx, float $\ast$cx, float $\ast$fa, float $\ast$fb, float $\ast$fc, float($\ast$func)(float))
+\item 
+float {\bf lcfiplus\-::brent} (float ax, float bx, float cx, float($\ast$f)(float), float tol, float $\ast$xmin)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf lcfiplus\-::ncom}
+\item 
+float($\ast$ {\bf lcfiplus\-::nrfunc} )(vector$<$ float $>$)
+\item 
+vector$<$ float $>$ {\bf lcfiplus\-::pcom}
+\item 
+vector$<$ float $>$ {\bf lcfiplus\-::xicom}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{algo.\-cc@{algo.\-cc}!T\-O\-L@{T\-O\-L}}
+\index{T\-O\-L@{T\-O\-L}!algo.cc@{algo.\-cc}}
+\subsubsection[{T\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-L~2e-\/4}\label{algo_8cc_a156b862ebf6d213f5da19b9e3ccb779e}
+
+
+Referenced by lcfiplus\-::linmin().
+

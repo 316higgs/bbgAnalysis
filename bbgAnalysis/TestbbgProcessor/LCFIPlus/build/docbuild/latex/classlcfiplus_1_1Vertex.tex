@@ -1,0 +1,615 @@
+\section{lcfiplus\-:\-:Vertex Class Reference}
+\label{classlcfiplus_1_1Vertex}\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}}
+
+
+{\ttfamily \#include $<$lcfiplus.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf vtx} \{ \\*
+{\bf xx} =0, 
+{\bf xy}, 
+{\bf yy}, 
+{\bf xz}, 
+\\*
+{\bf yz}, 
+{\bf zz}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vertex} ()
+\item 
+{\bf Vertex} (const double chi2, const double prob, const double x, const double y, const double z, const double cov[6], bool is\-Prim)
+\item 
+{\bf Vertex} (const {\bf Vertex} \&from)
+\item 
+{\bf $\sim$\-Vertex} ()
+\item 
+void {\bf add} (const {\bf Track} $\ast$trk)
+\item 
+void {\bf add} (const {\bf Track} $\ast$trk, double chi2)
+\item 
+void {\bf set\-Id} (int id) const 
+\item 
+int {\bf get\-Id} () const 
+\item 
+double {\bf get\-Chi2} () const 
+\item 
+double {\bf get\-Prob} () const 
+\item 
+double {\bf get\-X} () const 
+\item 
+double {\bf get\-Y} () const 
+\item 
+double {\bf get\-Z} () const 
+\item 
+T\-Vector3 {\bf get\-Pos} () const 
+\item 
+const double $\ast$ {\bf get\-Cov} () const 
+\item 
+const vector$<$ const {\bf Track} $\ast$ $>$ \& {\bf get\-Tracks} () const 
+\item 
+const map$<$ const \\*
+{\bf lcfiplus\-::\-Track} $\ast$, double $>$ \& {\bf get\-Tracks\-Chi2\-Map} () const 
+\item 
+double {\bf get\-Chi2\-Track} (const {\bf Track} $\ast$tr) const 
+\item 
+const {\bf Track} $\ast$ {\bf get\-Worst\-Track} () const 
+\item 
+double {\bf get\-Chi2\-Track\-Fit} (const {\bf Track} $\ast$tr, int mode=1) const 
+\item 
+double {\bf length} (const {\bf Vertex} $\ast$primary=0) const 
+\item 
+double {\bf significance} (const {\bf Vertex} $\ast$primary) const 
+\item 
+bool {\bf is\-Primary} () const 
+\item 
+void {\bf set\-Primary} (bool is\-Prim)
+\item 
+double {\bf get\-Pparallel} (const T\-Vector3 \&axis) const 
+\item 
+double {\bf get\-Vertex\-Mass} (const {\bf Vertex} $\ast$daughter=0, const T\-Vector3 $\ast$paxis=0, const double dmass=1.\-87, double $\ast$ppt=0, double $\ast$pp=0) const 
+\item 
+double {\bf get\-Vertex\-Angle} (const {\bf Vertex} $\ast$daughter, const {\bf Vertex} $\ast$primary=0) const 
+\item 
+const {\bf M\-C\-Particle} $\ast$ {\bf get\-Mcp} () const 
+\item 
+double {\bf dirdot} (const {\bf Vertex} $\ast$primary=0) const 
+\item 
+bool {\bf passes\-V0selection} (const {\bf Vertex} $\ast$primary=0) const 
+\item 
+T\-Lorentz\-Vector {\bf get\-Four\-Momentum} () const 
+\item 
+void {\bf set\-Vertexing\-Name} (string vtxname)
+\item 
+string {\bf get\-Vertexing\-Name} () const 
+\item 
+double {\bf get\-Recovered\-Vertex\-Mass} () const 
+\item 
+T\-Lorentz\-Vector {\bf get\-Recovered\-Four\-Momentum} () const 
+\item 
+T\-Lorentz\-Vector {\bf get\-Pi0s\-Four\-Momentum} () const 
+\item 
+int {\bf get\-N\-Pi0} () const 
+\item 
+void {\bf set\-Recovered\-Vertex\-Mass} (double rvtxmass)
+\item 
+void {\bf set\-Recovered\-Vertex\-Mass} ()
+\item 
+void {\bf set\-Recovered\-Four\-Momentum} (T\-Lorentz\-Vector rvtxmom)
+\item 
+void {\bf set\-Pi0s\-Four\-Momentum} (T\-Lorentz\-Vector pi0mom)
+\item 
+void {\bf set\-N\-Pi0} (int npi0)
+\item 
+void {\bf Print} () const 
+\item 
+bool {\bf cov\-Is\-Good} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bf dist\-\_\-sort} (const {\bf Vertex} $\ast$a, const {\bf Vertex} $\ast$b)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Lcfi\-Interface}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!vtx@{vtx}}
+\index{vtx@{vtx}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{vtx}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf lcfiplus\-::\-Vertex\-::vtx}}\label{classlcfiplus_1_1Vertex_a15c01de5b17d87300723f511270c000e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{xx@{xx}!lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}}\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!xx@{xx}}\item[{\em 
+xx\label{classlcfiplus_1_1Vertex_a15c01de5b17d87300723f511270c000eab2d2af04d0276eeef6fe85b4bec1dcd6}
+}]\index{xy@{xy}!lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}}\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!xy@{xy}}\item[{\em 
+xy\label{classlcfiplus_1_1Vertex_a15c01de5b17d87300723f511270c000ea0a1c8be2833d11d31ccf6e360c9f1092}
+}]\index{yy@{yy}!lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}}\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!yy@{yy}}\item[{\em 
+yy\label{classlcfiplus_1_1Vertex_a15c01de5b17d87300723f511270c000eab9123add394a45b209ecf2dcbbadd2b2}
+}]\index{xz@{xz}!lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}}\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!xz@{xz}}\item[{\em 
+xz\label{classlcfiplus_1_1Vertex_a15c01de5b17d87300723f511270c000eaa039300cd89c45578b448d38523e3716}
+}]\index{yz@{yz}!lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}}\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!yz@{yz}}\item[{\em 
+yz\label{classlcfiplus_1_1Vertex_a15c01de5b17d87300723f511270c000ea0def4b295c28cb009abb5bb35420e93f}
+}]\index{zz@{zz}!lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}}\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!zz@{zz}}\item[{\em 
+zz\label{classlcfiplus_1_1Vertex_a15c01de5b17d87300723f511270c000ea99b860240d4631f5f52932c3a9605d8f}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{Vertex}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Vertex\-::\-Vertex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_ae6a763bac94eda985789312974139b10}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{Vertex}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Vertex\-::\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const double}]{chi2, }
+\item[{const double}]{prob, }
+\item[{const double}]{x, }
+\item[{const double}]{y, }
+\item[{const double}]{z, }
+\item[{const double}]{cov[6], }
+\item[{bool}]{is\-Prim}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a25b20d08bbb3347b8874ffbca142dfe3}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{Vertex}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Vertex\-::\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} \&}]{from}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a07031c14bfbd6521e37c0c81c6d25ea9}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!$\sim$\-Vertex@{$\sim$\-Vertex}}
+\index{$\sim$\-Vertex@{$\sim$\-Vertex}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{$\sim$\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Vertex\-::$\sim$\-Vertex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a9a0d17624b18561069da6ed416613c51}
+
+
+\subsection{Member Function Documentation}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!add@{add}}
+\index{add@{add}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Track} $\ast$}]{trk}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Vertex_a16c62323c6454ff4343257028ee0c78c}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Fitter\-Simple$<$ Iterator $>$\-::operator()(), lcfiplus\-::\-Vertex\-Fitter\-L\-C\-F\-I$<$ Iterator $>$\-::operator()(), lcfiplus\-::\-Jet\-Finder\-::prerun(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Read\-Vertices().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!add@{add}}
+\index{add@{add}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Track} $\ast$}]{trk, }
+\item[{double}]{chi2}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1Vertex_a19c9a330bf712a1251f63c0dccb7ff7c}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!cov\-Is\-Good@{cov\-Is\-Good}}
+\index{cov\-Is\-Good@{cov\-Is\-Good}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{cov\-Is\-Good}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-Vertex\-::cov\-Is\-Good (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_aa4ef17c03ee77564e84b81a4b76be767}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!dirdot@{dirdot}}
+\index{dirdot@{dirdot}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{dirdot}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::dirdot (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{primary = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_a356b72a3df077a91f103aa7b12f25f39}
+
+
+References get\-Pos().
+
+
+
+Referenced by passes\-V0selection().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!dist\-\_\-sort@{dist\-\_\-sort}}
+\index{dist\-\_\-sort@{dist\-\_\-sort}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{dist\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Vertex\-::dist\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{a, }
+\item[{const {\bf Vertex} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classlcfiplus_1_1Vertex_a855d7cab7206ad2e96abcb565189778e}
+
+
+References get\-X(), get\-Y(), and get\-Z().
+
+
+
+Referenced by lcfiplus\-::\-Jet\-::get\-Vertices\-For\-F\-T().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Chi2@{get\-Chi2}}
+\index{get\-Chi2@{get\-Chi2}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Chi2}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Chi2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a18b20b5ae95d07bbae3e9a7016b66f96}
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), lcfiplus\-::find\-Tear\-Down\-Vertices(), match\-Mc\-Vertex(), and lcfiplus\-::\-Vertex\-Finder\-Suehara\-::optimize\-Two\-Vertices().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Chi2\-Track@{get\-Chi2\-Track}}
+\index{get\-Chi2\-Track@{get\-Chi2\-Track}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Chi2\-Track}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Chi2\-Track (
+\begin{DoxyParamCaption}
+\item[{const {\bf Track} $\ast$}]{tr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a18783bae90da0786541527e76cd4e0bc}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Suehara\-::associate\-I\-P\-Tracks\-A\-V\-F(), lcfiplus\-::find\-Tear\-Down\-Vertices(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), match\-Mc\-Vertex(), lcfiplus\-::\-Vertex\-Finder\-Tear\-Down$<$ Container, Vertex\-Fitter $>$\-::operator()(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::optimize\-Two\-Vertices(), and Print().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Chi2\-Track\-Fit@{get\-Chi2\-Track\-Fit}}
+\index{get\-Chi2\-Track\-Fit@{get\-Chi2\-Track\-Fit}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Chi2\-Track\-Fit}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Chi2\-Track\-Fit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Track} $\ast$}]{tr, }
+\item[{int}]{mode = {\ttfamily 1}}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_a177d53fec8ee287eea0f5038f7126299}
+
+
+References lcfiplus\-::\-Vertex\-Fitter\-Simple$<$ Iterator $>$\-::get\-Chi2(), lcfiplus\-::\-Point\-Base\-::\-P\-R\-I\-V\-T\-X, and lcfiplus\-::\-Point\-Base\-::\-S\-E\-C\-V\-T\-X.
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Cov@{get\-Cov}}
+\index{get\-Cov@{get\-Cov}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Cov}]{\setlength{\rightskip}{0pt plus 5cm}const double$\ast$ lcfiplus\-::\-Vertex\-::get\-Cov (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_aa7903541fa998439d4593969cc59e0a7}
+
+
+Referenced by lcfiplus\-::\-Lcfi\-Interface\-::get\-Chi2\-Track\-Vtx(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), lcfiplus\-::\-Point\-::\-Point(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0\-Significance(), lcfiplus\-::algo\-Sig\-Prob\-::track\-D0\-Significance(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-Z0\-Significance().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Four\-Momentum@{get\-Four\-Momentum}}
+\index{get\-Four\-Momentum@{get\-Four\-Momentum}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Four\-Momentum}]{\setlength{\rightskip}{0pt plus 5cm}T\-Lorentz\-Vector lcfiplus\-::\-Vertex\-::get\-Four\-Momentum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_a534f61d7ae4130a990785c4c359d0d78}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Vertex\-::get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a8e4e31a86f2d33a5bf6761760cba99eb}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Suehara\-::associate\-I\-P\-Tracks\-A\-V\-F().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Mcp@{get\-Mcp}}
+\index{get\-Mcp@{get\-Mcp}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Mcp}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Particle} $\ast$ lcfiplus\-::\-Vertex\-::get\-Mcp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_abe838c10cf938c22941d578c10fd549e}
+
+
+References lcfiplus\-::\-M\-C\-Particle\-::get\-Parent(), lcfiplus\-::\-M\-C\-Particle\-::get\-P\-D\-G(), and get\-Tracks().
+
+
+
+Referenced by lcfiplus\-::\-Jet\-Finder\-::prerun().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-N\-Pi0@{get\-N\-Pi0}}
+\index{get\-N\-Pi0@{get\-N\-Pi0}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-N\-Pi0}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-Vertex\-::get\-N\-Pi0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a3e3251691e44018796187a862a675c5b}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Pi0s\-Four\-Momentum@{get\-Pi0s\-Four\-Momentum}}
+\index{get\-Pi0s\-Four\-Momentum@{get\-Pi0s\-Four\-Momentum}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Pi0s\-Four\-Momentum}]{\setlength{\rightskip}{0pt plus 5cm}T\-Lorentz\-Vector lcfiplus\-::\-Vertex\-::get\-Pi0s\-Four\-Momentum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a0a0fb9158ad6b6ce9290d640829d20d5}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Pos@{get\-Pos}}
+\index{get\-Pos@{get\-Pos}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}T\-Vector3 lcfiplus\-::\-Vertex\-::get\-Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a669c6119a88f8af8fe4776cbb2f1bff2}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Suehara\-::associate\-I\-P\-Tracks\-A\-V\-F(), dirdot(), lcfiplus\-::\-Vertex\-Fitter\-Simple$<$ Iterator $>$\-::get\-Chi2(), get\-Vertex\-Angle(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), get\-Vertex\-Mass(), lcfiplus\-::\-Vertex\-Selector\-::is\-V0(), lcfiplus\-::\-Helix\-::\-Longitudinal\-Deviation(), lcfiplus\-::\-Track\-::momentum\-At\-Vertex(), lcfiplus\-::\-Vertex\-Selector\-::passes\-Cut(), passes\-V0selection(), lcfiplus\-::\-Jet\-Finder\-::prerun(), lcfiplus\-::\-Vertex\-Mass\-Recovery\-::process(), lcfiplus\-::\-Z\-H\-H\-Algo\-::process(), lcfiplus\-::\-Test\-Algo\-V0\-::process(), lcfiplus\-::\-Vertex\-Line\-::\-Vertex\-Line(), and lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Vertex\-Nearer().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Pparallel@{get\-Pparallel}}
+\index{get\-Pparallel@{get\-Pparallel}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Pparallel}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Pparallel (
+\begin{DoxyParamCaption}
+\item[{const T\-Vector3 \&}]{axis}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_acb356efa16225e74de3f4d23f355e255}
+
+
+Referenced by get\-Vertex\-Mass().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Prob@{get\-Prob}}
+\index{get\-Prob@{get\-Prob}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Prob}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Prob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a4a2ddc700a86b8b61d5c5c6f726204ad}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::optimize\-Two\-Vertices(), lcfiplus\-::\-Ft1\-Vtx\-Prob\-::process(), and lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Vertex\-Prob\-Larger().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Recovered\-Four\-Momentum@{get\-Recovered\-Four\-Momentum}}
+\index{get\-Recovered\-Four\-Momentum@{get\-Recovered\-Four\-Momentum}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Recovered\-Four\-Momentum}]{\setlength{\rightskip}{0pt plus 5cm}T\-Lorentz\-Vector lcfiplus\-::\-Vertex\-::get\-Recovered\-Four\-Momentum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_adfb5390d4a800505765a708887a086b6}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Recovered\-Vertex\-Mass@{get\-Recovered\-Vertex\-Mass}}
+\index{get\-Recovered\-Vertex\-Mass@{get\-Recovered\-Vertex\-Mass}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Recovered\-Vertex\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Recovered\-Vertex\-Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a14135a0532b9aac422824db1c14153db}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Tracks@{get\-Tracks}}
+\index{get\-Tracks@{get\-Tracks}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Tracks}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$const {\bf Track}$\ast$$>$\& lcfiplus\-::\-Vertex\-::get\-Tracks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a6233c5fab27f88dededbb7f14808afe4}
+
+
+Referenced by lcfiplus\-::\-Jet\-::add(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::associate\-I\-P\-Tracks\-A\-V\-F(), lcfiplus\-::algo\-Etc\-::connect\-Vertices\-To\-Jets(), lcfiplus\-::convert\-Jet\-Vertex(), lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), find\-Additional\-Vertices(), lcfiplus\-::find\-Tear\-Down\-Vertices(), lcfiplus\-::\-Jet\-::get\-All\-Tracks(), lcfiplus\-::\-Vertex\-Fitter\-Simple$<$ Iterator $>$\-::get\-Chi2(), get\-Mcp(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), lcfiplus\-::\-Jet\-::get\-Vertices\-For\-F\-T(), lcfiplus\-::\-Vertex\-Selector\-::is\-V0(), lcfiplus\-::\-Jet\-M\-C\-Match(), match\-Mc\-Vertex(), match\-Mc\-Vertex\-Reco(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::optimize\-Two\-Vertices(), lcfiplus\-::\-Primary\-Vertex\-Finder\-::process(), lcfiplus\-::\-Vertex\-Ntuple\-::process(), lcfiplus\-::\-Build\-Up\-Vertex\-::process(), lcfiplus\-::\-Test\-Algo\-::process(), lcfiplus\-::\-Vertex\-Analysis\-::process(), lcfiplus\-::\-Test\-Algo\-V0\-::process(), lcfiplus\-::\-Ft\-Vtx\-Longitudinal\-Deviation\-::process(), test\-Suehara(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-Jets().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Tracks\-Chi2\-Map@{get\-Tracks\-Chi2\-Map}}
+\index{get\-Tracks\-Chi2\-Map@{get\-Tracks\-Chi2\-Map}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Tracks\-Chi2\-Map}]{\setlength{\rightskip}{0pt plus 5cm}const map$<$const {\bf lcfiplus\-::\-Track}$\ast$, double$>$\& lcfiplus\-::\-Vertex\-::get\-Tracks\-Chi2\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_affe259358262dfeede80420f3650eb40}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Tear\-Down$<$ Container, Vertex\-Fitter $>$\-::operator()().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Vertex\-Angle@{get\-Vertex\-Angle}}
+\index{get\-Vertex\-Angle@{get\-Vertex\-Angle}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Vertex\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Vertex\-Angle (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{daughter, }
+\item[{const {\bf Vertex} $\ast$}]{primary = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_a81b7535f5f97ac0ffb2bbfb1861db72a}
+
+
+References get\-Pos().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Vertexing\-Name@{get\-Vertexing\-Name}}
+\index{get\-Vertexing\-Name@{get\-Vertexing\-Name}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Vertexing\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string lcfiplus\-::\-Vertex\-::get\-Vertexing\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a7c61038768e1a1b8e8b00cc90496507c}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Vertex\-Mass@{get\-Vertex\-Mass}}
+\index{get\-Vertex\-Mass@{get\-Vertex\-Mass}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Vertex\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Vertex\-Mass (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{daughter = {\ttfamily 0}, }
+\item[{const T\-Vector3 $\ast$}]{paxis = {\ttfamily 0}, }
+\item[{const double}]{dmass = {\ttfamily 1.87}, }
+\item[{double $\ast$}]{ppt = {\ttfamily 0}, }
+\item[{double $\ast$}]{pp = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_a20aafcb7b1d6afeb1bb2537615056e8b}
+
+
+References get\-Pos(), and get\-Pparallel().
+
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Worst\-Track@{get\-Worst\-Track}}
+\index{get\-Worst\-Track@{get\-Worst\-Track}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Worst\-Track}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Track} $\ast$ lcfiplus\-::\-Vertex\-::get\-Worst\-Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_aff1c9749fda45d9725fc0908e2f8c16a}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Tear\-Down$<$ Container, Vertex\-Fitter $>$\-::operator()().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_ae6499c6497b437381f42e586538b5b05}
+
+
+Referenced by dist\-\_\-sort(), lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), lcfiplus\-::find\-Tear\-Down\-Vertices(), lcfiplus\-::\-Lcfi\-Interface\-::get\-Chi2\-Track\-Vtx(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), match\-Mc\-Vertex(), lcfiplus\-::\-Point\-::\-Point(), lcfiplus\-::\-Jet\-Finder\-::prerun(), lcfiplus\-::\-Test\-Algo\-V0\-::process(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-D0\-Significance().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_aebafb0d0d13ca95a1c0c536b650e9aee}
+
+
+Referenced by dist\-\_\-sort(), lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), lcfiplus\-::find\-Tear\-Down\-Vertices(), lcfiplus\-::\-Lcfi\-Interface\-::get\-Chi2\-Track\-Vtx(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), match\-Mc\-Vertex(), lcfiplus\-::\-Point\-::\-Point(), lcfiplus\-::\-Jet\-Finder\-::prerun(), lcfiplus\-::\-Test\-Algo\-V0\-::process(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-D0\-Significance().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!get\-Z@{get\-Z}}
+\index{get\-Z@{get\-Z}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{get\-Z}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::get\-Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_afa8e31131d278bd3a45f5a9d2ae39eed}
+
+
+Referenced by dist\-\_\-sort(), lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), lcfiplus\-::find\-Tear\-Down\-Vertices(), lcfiplus\-::\-Lcfi\-Interface\-::get\-Chi2\-Track\-Vtx(), lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), match\-Mc\-Vertex(), lcfiplus\-::\-Point\-::\-Point(), lcfiplus\-::\-Jet\-Finder\-::prerun(), lcfiplus\-::\-Test\-Algo\-V0\-::process(), lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0(), lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Electron\-Finder(), lcfiplus\-::algo\-Etc\-::\-Simple\-Sec\-Muon\-Finder(), and lcfiplus\-::algo\-Sig\-Prob\-::track\-Z0\-Significance().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!is\-Primary@{is\-Primary}}
+\index{is\-Primary@{is\-Primary}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{is\-Primary}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-Vertex\-::is\-Primary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a4d37ba3517e586f7170e5ab47d03da65}
+
+
+Referenced by lcfiplus\-::\-Test\-Algo\-V0\-::process().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!length@{length}}
+\index{length@{length}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::length (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{primary = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_af08f1ed456aba1ea6a3f1e7162af1ad3}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!passes\-V0selection@{passes\-V0selection}}
+\index{passes\-V0selection@{passes\-V0selection}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{passes\-V0selection}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-Vertex\-::passes\-V0selection (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{primary = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_a184c7f27e106d206efc1233b50104ce9}
+
+
+References dirdot(), and get\-Pos().
+
+
+
+Referenced by lcfiplus\-::\-Jet\-::get\-All\-Tracks().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!Print@{Print}}
+\index{Print@{Print}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::\-Print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_a6a180890189d0ed88a796192ccbf639b}
+
+
+References get\-Chi2\-Track(), lcfiplus\-::\-Track\-::get\-Mcp(), lcfiplus\-::\-M\-C\-Particle\-::get\-P\-D\-G(), lcfiplus\-::\-M\-C\-Particle\-::get\-Semi\-Stable\-B\-Parent(), lcfiplus\-::\-M\-C\-Particle\-::get\-Semi\-Stable\-Parent(), xx, xy, xz, yy, yz, and zz.
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!set\-Id@{set\-Id}}
+\index{set\-Id@{set\-Id}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{set\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::set\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a9ae5da16bed74f92e82d5b13c2a1e58d}
+
+
+Referenced by lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Read\-Vertices(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Write\-Vertices().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!set\-N\-Pi0@{set\-N\-Pi0}}
+\index{set\-N\-Pi0@{set\-N\-Pi0}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{set\-N\-Pi0}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::set\-N\-Pi0 (
+\begin{DoxyParamCaption}
+\item[{int}]{npi0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a39ca89c2ee89689a6e71464315536a9c}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!set\-Pi0s\-Four\-Momentum@{set\-Pi0s\-Four\-Momentum}}
+\index{set\-Pi0s\-Four\-Momentum@{set\-Pi0s\-Four\-Momentum}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{set\-Pi0s\-Four\-Momentum}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::set\-Pi0s\-Four\-Momentum (
+\begin{DoxyParamCaption}
+\item[{T\-Lorentz\-Vector}]{pi0mom}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_acdfaf7631b3a1421a0944b7b88e7e4c9}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!set\-Primary@{set\-Primary}}
+\index{set\-Primary@{set\-Primary}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{set\-Primary}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::set\-Primary (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\-Prim}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a0e890130d15408ae6be6d13937e8bb3f}
+
+
+Referenced by lcfiplus\-::find\-Primary\-Vertex().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!set\-Recovered\-Four\-Momentum@{set\-Recovered\-Four\-Momentum}}
+\index{set\-Recovered\-Four\-Momentum@{set\-Recovered\-Four\-Momentum}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{set\-Recovered\-Four\-Momentum}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::set\-Recovered\-Four\-Momentum (
+\begin{DoxyParamCaption}
+\item[{T\-Lorentz\-Vector}]{rvtxmom}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a81dd39a916b6ed7c8ea27a86b639be54}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!set\-Recovered\-Vertex\-Mass@{set\-Recovered\-Vertex\-Mass}}
+\index{set\-Recovered\-Vertex\-Mass@{set\-Recovered\-Vertex\-Mass}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{set\-Recovered\-Vertex\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::set\-Recovered\-Vertex\-Mass (
+\begin{DoxyParamCaption}
+\item[{double}]{rvtxmass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a14c7ca71315241a3ddeb054952b5f6b9}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!set\-Recovered\-Vertex\-Mass@{set\-Recovered\-Vertex\-Mass}}
+\index{set\-Recovered\-Vertex\-Mass@{set\-Recovered\-Vertex\-Mass}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{set\-Recovered\-Vertex\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::set\-Recovered\-Vertex\-Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a208d7dae8d5caaccc9f29e68684664d6}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!set\-Vertexing\-Name@{set\-Vertexing\-Name}}
+\index{set\-Vertexing\-Name@{set\-Vertexing\-Name}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{set\-Vertexing\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-Vertex\-::set\-Vertexing\-Name (
+\begin{DoxyParamCaption}
+\item[{string}]{vtxname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1Vertex_a32f8186e6f6321317c1fda6f49a450a2}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Suehara\-::\-Get\-Vertex\-List(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Read\-Vertices().
+
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!significance@{significance}}
+\index{significance@{significance}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{significance}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-Vertex\-::significance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{primary}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1Vertex_a625dfc3e80ed757a4d5616c43c3580be}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{lcfiplus\-::\-Vertex@{lcfiplus\-::\-Vertex}!Lcfi\-Interface@{Lcfi\-Interface}}
+\index{Lcfi\-Interface@{Lcfi\-Interface}!lcfiplus::Vertex@{lcfiplus\-::\-Vertex}}
+\subsubsection[{Lcfi\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Lcfi\-Interface}\hspace{0.3cm}{\ttfamily [friend]}}\label{classlcfiplus_1_1Vertex_accab27529b30dc40f1d8ddef17b413d9}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus.\-h}\item 
+{\bf lcfiplus.\-cc}\end{DoxyCompactItemize}

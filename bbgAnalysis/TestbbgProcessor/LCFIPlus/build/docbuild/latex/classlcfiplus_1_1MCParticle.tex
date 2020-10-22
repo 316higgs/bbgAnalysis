@@ -1,0 +1,645 @@
+\section{lcfiplus\-:\-:M\-C\-Particle Class Reference}
+\label{classlcfiplus_1_1MCParticle}\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}}
+
+
+{\ttfamily \#include $<$lcfiplus.\-h$>$}
+
+Inheritance diagram for lcfiplus\-:\-:M\-C\-Particle\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlcfiplus_1_1MCParticle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf M\-C\-Particle} (int id, int pdg, {\bf M\-C\-Particle} $\ast$parent, double charge, const T\-Lorentz\-Vector \&p, const T\-Vector3 \&v)
+\item 
+{\bf M\-C\-Particle} ()
+\item 
+{\bf $\sim$\-M\-C\-Particle} ()
+\item 
+void {\bf Init} (int id, int pdg, {\bf M\-C\-Particle} $\ast$parent, double charge, const T\-Lorentz\-Vector \&p, const T\-Vector3 \&v)
+\item 
+int {\bf get\-Id} () const 
+\item 
+void {\bf set\-Id} (int id)
+\item 
+int {\bf get\-P\-D\-G} () const 
+\item 
+void {\bf set\-P\-D\-G} (int pdg)
+\item 
+double {\bf get\-Charge} () const 
+\item 
+void {\bf set\-Charge} (double charge)
+\item 
+const T\-Vector3 \& {\bf get\-Vertex} () const 
+\item 
+void {\bf set\-Vertex} (const T\-Vector3 \&v)
+\item 
+const T\-Vector3 \& {\bf get\-End\-Vertex} () const 
+\item 
+const {\bf M\-C\-Particle} $\ast$ {\bf get\-Parent} () const 
+\item 
+void {\bf set\-Parent} (const {\bf M\-C\-Particle} $\ast$parent)
+\item 
+const vector$<$ const {\bf M\-C\-Particle} $\ast$ $>$ \& {\bf get\-Daughters} () const 
+\item 
+void {\bf add\-Daughter} (const {\bf M\-C\-Particle} $\ast$mcp)
+\item 
+bool {\bf is\-Parent} (const {\bf M\-C\-Particle} $\ast$mcp) const 
+\item 
+int {\bf get\-Flavor} () const 
+\item 
+const {\bf M\-C\-Particle} $\ast$ {\bf get\-Color\-String} () const 
+\item 
+const {\bf M\-C\-Color\-Singlet} $\ast$ {\bf get\-Color\-Singlet} (const vector$<$ const {\bf M\-C\-Color\-Singlet} $\ast$ $>$ $\ast$pcs) const 
+\item 
+bool {\bf is\-Stable\-Track} () const 
+\item 
+bool {\bf is\-Stable} () const 
+\item 
+bool {\bf is\-Semi\-Stable\-B} () const 
+\item 
+bool {\bf is\-Semi\-Stable\-C} () const 
+\item 
+bool {\bf is\-Semi\-Stable\-S} () const 
+\item 
+bool {\bf is\-Semi\-Stable} () const 
+\item 
+const {\bf M\-C\-Particle} $\ast$ {\bf semileptonic\-Decay} () const 
+\item 
+int {\bf get\-Flavor\-Tag\-Category} () const 
+\item 
+const {\bf M\-C\-Particle} $\ast$ {\bf get\-Semi\-Stable\-Parent} () const 
+\item 
+const {\bf M\-C\-Particle} $\ast$ {\bf get\-Semi\-Stable\-B\-Parent} () const 
+\item 
+const {\bf M\-C\-Particle} $\ast$ {\bf get\-Semi\-Stable\-C\-Parent} () const 
+\item 
+double {\bf decay\-Distance} () const 
+\item 
+const {\bf M\-C\-Particle} $\ast$ {\bf find\-Dau\-For\-Decay} () const 
+\item 
+double {\bf get\-Ex} () const 
+\item 
+double {\bf get\-Ey} () const 
+\item 
+double {\bf get\-Ez} () const 
+\item 
+vector$<$ const \\*
+{\bf lcfiplus\-::\-M\-C\-Particle} $\ast$ $>$ {\bf prompt\-Tracks} () const 
+\item 
+double {\bf get\-D0} () const 
+\item 
+double {\bf get\-Z0} () const 
+\item 
+double {\bf get\-Phi} () const 
+\item 
+double {\bf get\-Omega} () const 
+\item 
+double {\bf get\-Tan\-Lambda} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!M\-C\-Particle@{M\-C\-Particle}}
+\index{M\-C\-Particle@{M\-C\-Particle}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{M\-C\-Particle}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-M\-C\-Particle\-::\-M\-C\-Particle (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{pdg, }
+\item[{{\bf M\-C\-Particle} $\ast$}]{parent, }
+\item[{double}]{charge, }
+\item[{const T\-Lorentz\-Vector \&}]{p, }
+\item[{const T\-Vector3 \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a501ad8f712fa2415d047e49e11b81372}
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!M\-C\-Particle@{M\-C\-Particle}}
+\index{M\-C\-Particle@{M\-C\-Particle}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{M\-C\-Particle}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-M\-C\-Particle\-::\-M\-C\-Particle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a9de93613c887cc4ddfd18da3d7ad72fb}
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!$\sim$\-M\-C\-Particle@{$\sim$\-M\-C\-Particle}}
+\index{$\sim$\-M\-C\-Particle@{$\sim$\-M\-C\-Particle}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{$\sim$\-M\-C\-Particle}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-M\-C\-Particle\-::$\sim$\-M\-C\-Particle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a72a040dad26b23618dbb31e760fc2516}
+
+
+\subsection{Member Function Documentation}
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!add\-Daughter@{add\-Daughter}}
+\index{add\-Daughter@{add\-Daughter}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{add\-Daughter}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-M\-C\-Particle\-::add\-Daughter (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\-C\-Particle} $\ast$}]{mcp}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1MCParticle_a0924073bf956ff336ee780f3c069431e}
+
+
+Referenced by Init(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Set\-Event().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!decay\-Distance@{decay\-Distance}}
+\index{decay\-Distance@{decay\-Distance}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{decay\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::decay\-Distance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a664adb73d9b9021196727201187c6188}
+
+
+References find\-Dau\-For\-Decay(), and get\-Vertex().
+
+
+
+Referenced by prompt\-Tracks().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!find\-Dau\-For\-Decay@{find\-Dau\-For\-Decay}}
+\index{find\-Dau\-For\-Decay@{find\-Dau\-For\-Decay}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{find\-Dau\-For\-Decay}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Particle} $\ast$ lcfiplus\-::\-M\-C\-Particle\-::find\-Dau\-For\-Decay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_ada5ed710ba9ca518b68d324c54e07e02}
+
+
+References find\-Dau\-For\-Decay(), get\-Vertex(), is\-Semi\-Stable(), and is\-Stable().
+
+
+
+Referenced by decay\-Distance(), find\-Dau\-For\-Decay(), get\-End\-Vertex(), get\-Ex(), get\-Ey(), and get\-Ez().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Charge@{get\-Charge}}
+\index{get\-Charge@{get\-Charge}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Charge}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-Charge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a172b31b0b89e6d86b6b9913fab25b927}
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), get\-D0(), get\-Omega(), get\-Phi(), get\-Tan\-Lambda(), get\-Z0(), and prompt\-Tracks().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Color\-Singlet@{get\-Color\-Singlet}}
+\index{get\-Color\-Singlet@{get\-Color\-Singlet}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Color\-Singlet}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Color\-Singlet} $\ast$ lcfiplus\-::\-M\-C\-Particle\-::get\-Color\-Singlet (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ const {\bf M\-C\-Color\-Singlet} $\ast$ $>$ $\ast$}]{pcs}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a0592ca7e522959921bab83142c6be49b}
+
+
+References get\-Color\-Singlet(), and get\-Parent().
+
+
+
+Referenced by get\-Color\-Singlet(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Set\-Color\-Singlets().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Color\-String@{get\-Color\-String}}
+\index{get\-Color\-String@{get\-Color\-String}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Color\-String}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Particle} $\ast$ lcfiplus\-::\-M\-C\-Particle\-::get\-Color\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_ad102c843867c3c1af9d49f2bddd7fc50}
+
+
+References get\-Color\-String(), get\-Parent(), and get\-P\-D\-G().
+
+
+
+Referenced by get\-Color\-String(), and lcfiplus\-::\-Event\-::mc\-Get\-Color\-Strings().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-D0@{get\-D0}}
+\index{get\-D0@{get\-D0}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-D0}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-D0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a32d7b02b73f19e0cf70788e09c7b9378}
+
+
+References get\-Charge(), get\-Vertex(), and lcfiplus\-::\-Globals\-::\-Instance().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Daughters@{get\-Daughters}}
+\index{get\-Daughters@{get\-Daughters}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Daughters}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$const {\bf M\-C\-Particle}$\ast$$>$\& lcfiplus\-::\-M\-C\-Particle\-::get\-Daughters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a6384ecf976bd5fe0b6feedfe6375c712}
+
+
+Referenced by find\-Mc\-Vertex(), match\-Mc\-Vertex(), lcfiplus\-::\-Ft\-M\-C\-N\-B\-::process(), lcfiplus\-::\-Ft\-M\-C\-N\-C\-::process(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Set\-Color\-Singlets().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-End\-Vertex@{get\-End\-Vertex}}
+\index{get\-End\-Vertex@{get\-End\-Vertex}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-End\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}const T\-Vector3 \& lcfiplus\-::\-M\-C\-Particle\-::get\-End\-Vertex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a5e27c6a865a6f367e2fe5a0f34d3f7f3}
+
+
+References find\-Dau\-For\-Decay(), and get\-Vertex().
+
+
+
+Referenced by find\-Mc\-Vertex(), and match\-Mc\-Vertex().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Ex@{get\-Ex}}
+\index{get\-Ex@{get\-Ex}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Ex}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-Ex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a333782bfc69575c2a520b93ec385fe43}
+
+
+References find\-Dau\-For\-Decay(), and get\-Vertex().
+
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Ey@{get\-Ey}}
+\index{get\-Ey@{get\-Ey}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Ey}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-Ey (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a95ec9e2ad33fc65945a7ec1359930b70}
+
+
+References find\-Dau\-For\-Decay(), and get\-Vertex().
+
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Ez@{get\-Ez}}
+\index{get\-Ez@{get\-Ez}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Ez}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-Ez (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_af97ed057502dc37de386180b8dd421c7}
+
+
+References find\-Dau\-For\-Decay(), and get\-Vertex().
+
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Flavor@{get\-Flavor}}
+\index{get\-Flavor@{get\-Flavor}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Flavor}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-M\-C\-Particle\-::get\-Flavor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a8c3faf1b70baa2920a74e8a0a0f68497}
+
+
+References get\-P\-D\-G().
+
+
+
+Referenced by find\-Mc\-Jet\-Flavor(), get\-Flavor\-Tag\-Category(), is\-Semi\-Stable\-B(), is\-Semi\-Stable\-C(), and is\-Semi\-Stable\-S().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Flavor\-Tag\-Category@{get\-Flavor\-Tag\-Category}}
+\index{get\-Flavor\-Tag\-Category@{get\-Flavor\-Tag\-Category}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Flavor\-Tag\-Category}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-M\-C\-Particle\-::get\-Flavor\-Tag\-Category (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a17289f6fee454e199f5b88003d9f7be3}
+
+
+References get\-Flavor(), get\-Semi\-Stable\-Parent(), and get\-Vertex().
+
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), and lcfiplus\-::find\-Tear\-Down\-Vertices().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-M\-C\-Particle\-::get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a382bbd97e3cec3577b44f0937ab83f68}
+
+
+Referenced by lcfiplus\-::\-Event\-::get\-M\-C\-Particle().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Omega@{get\-Omega}}
+\index{get\-Omega@{get\-Omega}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Omega}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-Omega (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_af2bbd79ee1184907839e825859d431a3}
+
+
+References get\-Charge(), get\-Vertex(), and lcfiplus\-::\-Globals\-::\-Instance().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Parent@{get\-Parent}}
+\index{get\-Parent@{get\-Parent}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Parent}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Particle}$\ast$ lcfiplus\-::\-M\-C\-Particle\-::get\-Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a409788f44494ff0d15675ce5983dc262}
+
+
+Referenced by find\-Mc\-Vertex(), get\-Color\-Singlet(), get\-Color\-String(), lcfiplus\-::\-Vertex\-::get\-Mcp(), get\-Semi\-Stable\-B\-Parent(), get\-Semi\-Stable\-C\-Parent(), get\-Semi\-Stable\-Parent(), is\-Parent(), lcfiplus\-::\-Vertex\-Ntuple\-::process(), lcfiplus\-::\-Test\-Algo\-V0\-::process(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Set\-Color\-Singlets().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-P\-D\-G@{get\-P\-D\-G}}
+\index{get\-P\-D\-G@{get\-P\-D\-G}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-P\-D\-G}]{\setlength{\rightskip}{0pt plus 5cm}int lcfiplus\-::\-M\-C\-Particle\-::get\-P\-D\-G (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a50147e6237965da7bde639ccdbb39de7}
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), find\-Mc\-Vertex(), lcfiplus\-::\-Vertex\-Finder\-Perfect\-::find\-Perfect\-Vertices(), get\-Color\-String(), get\-Flavor(), lcfiplus\-::\-Vertex\-::get\-Mcp(), lcfiplus\-::\-Jet\-M\-C\-Match(), match\-Mc\-Vertex(), match\-Mc\-Vertex\-Reco\-V0(), lcfiplus\-::\-Jet\-Finder\-::prerun(), lcfiplus\-::\-Vertex\-::\-Print(), lcfiplus\-::\-Vertex\-Ntuple\-::process(), lcfiplus\-::\-Test\-Algo\-::process(), lcfiplus\-::\-Test\-Algo\-V0\-::process(), semileptonic\-Decay(), lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Set\-Color\-Singlets(), and test\-Suehara().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Phi@{get\-Phi}}
+\index{get\-Phi@{get\-Phi}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Phi}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-Phi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_ad3f4d85f4324488b7b89b390d105d6bb}
+
+
+References get\-Charge(), get\-Vertex(), and lcfiplus\-::\-Globals\-::\-Instance().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Semi\-Stable\-B\-Parent@{get\-Semi\-Stable\-B\-Parent}}
+\index{get\-Semi\-Stable\-B\-Parent@{get\-Semi\-Stable\-B\-Parent}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Semi\-Stable\-B\-Parent}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Particle} $\ast$ lcfiplus\-::\-M\-C\-Particle\-::get\-Semi\-Stable\-B\-Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a1d2f33124422eb72bb46b07f18c373f5}
+
+
+References get\-Parent(), get\-Semi\-Stable\-B\-Parent(), and is\-Semi\-Stable\-B().
+
+
+
+Referenced by get\-Semi\-Stable\-B\-Parent(), lcfiplus\-::\-Event\-::mc\-Get\-Semi\-Stable\-B\-Cs(), lcfiplus\-::\-Event\-::mc\-Get\-Semi\-Stable\-Bs(), lcfiplus\-::\-Vertex\-::\-Print(), lcfiplus\-::\-Test\-Algo\-::process(), lcfiplus\-::\-Vertex\-Analysis\-::process(), lcfiplus\-::\-Ft\-M\-C\-N\-B\-::process(), lcfiplus\-::\-Ft\-M\-C\-N\-C\-::process(), and test\-Suehara().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Semi\-Stable\-C\-Parent@{get\-Semi\-Stable\-C\-Parent}}
+\index{get\-Semi\-Stable\-C\-Parent@{get\-Semi\-Stable\-C\-Parent}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Semi\-Stable\-C\-Parent}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Particle} $\ast$ lcfiplus\-::\-M\-C\-Particle\-::get\-Semi\-Stable\-C\-Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_ae13bfd47145d112b3f2224c2e0784e2f}
+
+
+References get\-Parent(), get\-Semi\-Stable\-C\-Parent(), and is\-Semi\-Stable\-C().
+
+
+
+Referenced by get\-Semi\-Stable\-C\-Parent(), lcfiplus\-::\-Event\-::mc\-Get\-Semi\-Stable\-B\-Cs(), lcfiplus\-::\-Event\-::mc\-Get\-Semi\-Stable\-Cs(), lcfiplus\-::\-Vertex\-Analysis\-::process(), lcfiplus\-::\-Ft\-M\-C\-N\-C\-::process(), and test\-Suehara().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Semi\-Stable\-Parent@{get\-Semi\-Stable\-Parent}}
+\index{get\-Semi\-Stable\-Parent@{get\-Semi\-Stable\-Parent}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Semi\-Stable\-Parent}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Particle} $\ast$ lcfiplus\-::\-M\-C\-Particle\-::get\-Semi\-Stable\-Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a4b6cb50f0903c879faa296e2cc2ac07b}
+
+
+References get\-Parent(), get\-Semi\-Stable\-Parent(), is\-Semi\-Stable(), and is\-Stable().
+
+
+
+Referenced by find\-Mc\-Vertex(), lcfiplus\-::\-Vertex\-Finder\-Perfect\-::find\-Perfect\-Vertices(), get\-Flavor\-Tag\-Category(), get\-Semi\-Stable\-Parent(), lcfiplus\-::\-Vertex\-::\-Print(), lcfiplus\-::\-Vertex\-Analysis\-::process(), and test\-Suehara().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Tan\-Lambda@{get\-Tan\-Lambda}}
+\index{get\-Tan\-Lambda@{get\-Tan\-Lambda}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Tan\-Lambda}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-Tan\-Lambda (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_ae7613fd8d40fa494691aeecaee7ddcf5}
+
+
+References get\-Charge(), get\-Vertex(), and lcfiplus\-::\-Globals\-::\-Instance().
+
+
+
+Referenced by match\-Mc\-Vertex().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Vertex@{get\-Vertex}}
+\index{get\-Vertex@{get\-Vertex}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}const T\-Vector3\& lcfiplus\-::\-M\-C\-Particle\-::get\-Vertex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_ab9054c0455cee795f992ce6549fcaf45}
+
+
+Referenced by decay\-Distance(), lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), find\-Dau\-For\-Decay(), find\-Mc\-Jet\-Flavor(), find\-Mc\-Vertex(), get\-D0(), get\-End\-Vertex(), get\-Ex(), get\-Ey(), get\-Ez(), get\-Flavor\-Tag\-Category(), get\-Omega(), get\-Phi(), get\-Tan\-Lambda(), and get\-Z0().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!get\-Z0@{get\-Z0}}
+\index{get\-Z0@{get\-Z0}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{get\-Z0}]{\setlength{\rightskip}{0pt plus 5cm}double lcfiplus\-::\-M\-C\-Particle\-::get\-Z0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_afa52ecceed6d2870c6d62040899953be}
+
+
+References get\-Charge(), get\-Vertex(), and lcfiplus\-::\-Globals\-::\-Instance().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!Init@{Init}}
+\index{Init@{Init}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-M\-C\-Particle\-::\-Init (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{pdg, }
+\item[{{\bf M\-C\-Particle} $\ast$}]{parent, }
+\item[{double}]{charge, }
+\item[{const T\-Lorentz\-Vector \&}]{p, }
+\item[{const T\-Vector3 \&}]{v}
+\end{DoxyParamCaption}
+)}\label{classlcfiplus_1_1MCParticle_a625da26849a99e4bb245330fcbd521b2}
+
+
+References add\-Daughter().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!is\-Parent@{is\-Parent}}
+\index{is\-Parent@{is\-Parent}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{is\-Parent}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-M\-C\-Particle\-::is\-Parent (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\-C\-Particle} $\ast$}]{mcp}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a8ea9a0e88daf109ba4d6dea4267f5062}
+
+
+References get\-Parent(), and is\-Parent().
+
+
+
+Referenced by is\-Parent(), lcfiplus\-::\-Jet\-M\-C\-Match(), lcfiplus\-::\-Event\-::mc\-Find\-Parent(), lcfiplus\-::\-Jet\-Finder\-::prerun(), lcfiplus\-::\-Ft\-M\-C\-N\-B\-::process(), lcfiplus\-::\-Ft\-M\-C\-N\-C\-::process(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Set\-Color\-Singlets().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!is\-Semi\-Stable@{is\-Semi\-Stable}}
+\index{is\-Semi\-Stable@{is\-Semi\-Stable}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{is\-Semi\-Stable}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-M\-C\-Particle\-::is\-Semi\-Stable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a234badb51694d57727e1d536020c32ea}
+
+
+Referenced by find\-Dau\-For\-Decay(), find\-Mc\-Vertex(), get\-Semi\-Stable\-Parent(), and prompt\-Tracks().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!is\-Semi\-Stable\-B@{is\-Semi\-Stable\-B}}
+\index{is\-Semi\-Stable\-B@{is\-Semi\-Stable\-B}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{is\-Semi\-Stable\-B}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-M\-C\-Particle\-::is\-Semi\-Stable\-B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a8f80be2fa365124e6cd936ce4378a3db}
+
+
+References get\-Flavor().
+
+
+
+Referenced by get\-Semi\-Stable\-B\-Parent(), and lcfiplus\-::\-Event\-::mc\-Number\-Of\-B().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!is\-Semi\-Stable\-C@{is\-Semi\-Stable\-C}}
+\index{is\-Semi\-Stable\-C@{is\-Semi\-Stable\-C}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{is\-Semi\-Stable\-C}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-M\-C\-Particle\-::is\-Semi\-Stable\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a0086673c94426e836b3e38e5ce69bcc7}
+
+
+References get\-Flavor().
+
+
+
+Referenced by get\-Semi\-Stable\-C\-Parent(), and lcfiplus\-::\-Event\-::mc\-Number\-Of\-C().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!is\-Semi\-Stable\-S@{is\-Semi\-Stable\-S}}
+\index{is\-Semi\-Stable\-S@{is\-Semi\-Stable\-S}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{is\-Semi\-Stable\-S}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-M\-C\-Particle\-::is\-Semi\-Stable\-S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_ae6a0dbb46db9be2f2a1db18327a45227}
+
+
+References get\-Flavor().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!is\-Stable@{is\-Stable}}
+\index{is\-Stable@{is\-Stable}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{is\-Stable}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-M\-C\-Particle\-::is\-Stable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_acd092d93cd4dcc8e0ed0dcadc3365e2e}
+
+
+References is\-Stable\-Track().
+
+
+
+Referenced by find\-Dau\-For\-Decay(), find\-Mc\-Vertex(), and get\-Semi\-Stable\-Parent().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!is\-Stable\-Track@{is\-Stable\-Track}}
+\index{is\-Stable\-Track@{is\-Stable\-Track}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{is\-Stable\-Track}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-M\-C\-Particle\-::is\-Stable\-Track (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_acf7e0a53521e544a7f86ade63a0afcb3}
+
+
+Referenced by lcfiplus\-::\-Event\-Navigator\-::draw\-Event(), find\-Mc\-Vertex(), is\-Stable(), and prompt\-Tracks().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!prompt\-Tracks@{prompt\-Tracks}}
+\index{prompt\-Tracks@{prompt\-Tracks}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{prompt\-Tracks}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ const {\bf M\-C\-Particle} $\ast$ $>$ lcfiplus\-::\-M\-C\-Particle\-::prompt\-Tracks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a535e5a191ac8e772e1c8e1e004e35717}
+
+
+References decay\-Distance(), get\-Charge(), is\-Semi\-Stable(), is\-Stable\-Track(), and prompt\-Tracks().
+
+
+
+Referenced by prompt\-Tracks().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!semileptonic\-Decay@{semileptonic\-Decay}}
+\index{semileptonic\-Decay@{semileptonic\-Decay}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{semileptonic\-Decay}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\-C\-Particle} $\ast$ lcfiplus\-::\-M\-C\-Particle\-::semileptonic\-Decay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classlcfiplus_1_1MCParticle_a3aa892ab4dce5d2a13a45b2b32a496f7}
+
+
+References get\-P\-D\-G().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!set\-Charge@{set\-Charge}}
+\index{set\-Charge@{set\-Charge}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{set\-Charge}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-M\-C\-Particle\-::set\-Charge (
+\begin{DoxyParamCaption}
+\item[{double}]{charge}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_aa64441143d1b32ab2d9cb66b51d7e80f}
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!set\-Id@{set\-Id}}
+\index{set\-Id@{set\-Id}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{set\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-M\-C\-Particle\-::set\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a773ac0c66ecbd36a2cdc2175f5a67714}
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!set\-Parent@{set\-Parent}}
+\index{set\-Parent@{set\-Parent}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{set\-Parent}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-M\-C\-Particle\-::set\-Parent (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\-C\-Particle} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a1db3f4189e92cf780603e5b2b00a3509}
+
+
+Referenced by lcfiplus\-::\-Vertex\-Finder\-Perfect\-::find\-Perfect\-Vertices(), and lcfiplus\-::\-L\-C\-I\-O\-Storer\-::\-Set\-Event().
+
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!set\-P\-D\-G@{set\-P\-D\-G}}
+\index{set\-P\-D\-G@{set\-P\-D\-G}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{set\-P\-D\-G}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-M\-C\-Particle\-::set\-P\-D\-G (
+\begin{DoxyParamCaption}
+\item[{int}]{pdg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_aef0de8c1c7337e97fb36e04560636fc1}
+\index{lcfiplus\-::\-M\-C\-Particle@{lcfiplus\-::\-M\-C\-Particle}!set\-Vertex@{set\-Vertex}}
+\index{set\-Vertex@{set\-Vertex}!lcfiplus::MCParticle@{lcfiplus\-::\-M\-C\-Particle}}
+\subsubsection[{set\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void lcfiplus\-::\-M\-C\-Particle\-::set\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const T\-Vector3 \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1MCParticle_a18f15a4ae2aae1469c5d7d5f7440d437}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus.\-h}\item 
+{\bf lcfiplus.\-cc}\end{DoxyCompactItemize}

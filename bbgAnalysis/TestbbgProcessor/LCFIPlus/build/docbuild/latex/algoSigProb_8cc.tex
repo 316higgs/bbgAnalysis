@@ -1,0 +1,55 @@
+\section{algo\-Sig\-Prob.\-cc File Reference}
+\label{algoSigProb_8cc}\index{algo\-Sig\-Prob.\-cc@{algo\-Sig\-Prob.\-cc}}
+{\ttfamily \#include \char`\"{}lcfiplus.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Jet\-Finder.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include \char`\"{}algo\-Sig\-Prob.\-h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus}
+\item 
+{\bf lcfiplus\-::algo\-Sig\-Prob}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf lcfiplus\-::algo\-Sig\-Prob\-::track\-Selection\-For\-Flavor\-Tag} (const {\bf Track} $\ast$trk, int n\-Hit\-Cut)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::track\-D0\-Significance} (const {\bf Track} $\ast$trk, const {\bf Vertex} $\ast$pri)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::track\-Z0\-Significance} (const {\bf Track} $\ast$trk, const {\bf Vertex} $\ast$pri)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0\-Significance} (const {\bf Track} $\ast$trk, const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, bool update\-Flt=false)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::signed\-D0} (const {\bf Track} $\ast$trk, const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, bool update\-Flt=false)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0\-Significance} (const {\bf Track} $\ast$trk, const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, bool update\-Flt=false)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::signed\-Z0} (const {\bf Track} $\ast$trk, const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, bool update\-Flt=false)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::prob1\-D} (double sig, double maxsig, double $\ast$pars)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::track\-Prob\-D0} (const {\bf Track} $\ast$trk, const {\bf Vertex} $\ast$pri)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::track\-Prob\-Z0} (const {\bf Track} $\ast$trk, const {\bf Vertex} $\ast$pri)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob\-D0} (const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, int minhitcut, double maxd0sigcut=1e+300, bool use\-Vertex\-Tracks=true)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob\-Z0} (const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, int minhitcut, double maxz0sigcut=1e+300, bool use\-Vertex\-Tracks=true)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::prob1\-D2} (double sig, double, const T\-H1 $\ast$jh1, const T\-H1 $\ast$jh2)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob2\-D0} (const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, int minhitcut, double maxd0sigcut, bool use\-Vertex\-Tracks, const T\-H1 $\ast$jh1, const T\-H1 $\ast$jh2)
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::joint\-Prob2\-Z0} (const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, int minhitcut, double maxz0sigcut, bool use\-Vertex\-Tracks, const T\-H1 $\ast$jh1, const T\-H1 $\ast$jh2)
+\item 
+void {\bf lcfiplus\-::algo\-Sig\-Prob\-::find\-Most\-Significant\-Track} (const {\bf Jet} $\ast$jet, const {\bf Vertex} $\ast$pri, int minhitcut, double sig\-Vec[6])
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::rpars} [7]
+\item 
+double {\bf lcfiplus\-::algo\-Sig\-Prob\-::zpars} [7]
+\end{DoxyCompactItemize}

@@ -1,0 +1,152 @@
+\section{algo.\-h File Reference}
+\label{algo_8h}\index{algo.\-h@{algo.\-h}}
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+{\bf lcfiplus}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\-H\-F\-T}(a, b, c, d)~(a)=(b);(b)=(c);(c)=(d);
+\item 
+\#define {\bf S\-H\-F\-T2}(a, b, c)~(a)=(b);(b)=(c);
+\item 
+\#define {\bf S\-H\-F\-T3}(a, b, c, d)~(a)=(b);(b)=(c);(c)=(d);
+\item 
+\#define {\bf S\-I\-G\-N}(a, b)~((b)$>$=0.\-0 ? fabs(a) \-: -\/fabs(a))
+\item 
+\#define {\bf M\-O\-V3}(a, b, c, d, e, f)~(a)=(d);(b)=(e);(c)=(f);
+\item 
+\#define {\bf F\-M\-A\-X}(a, b)~(maxarg1=(a),maxarg2=(b),(maxarg1) $>$ (maxarg2) ? (maxarg1) \-: (maxarg2))
+\item 
+\#define {\bf F\-M\-A\-X}(a, b)~(maxarg1=(a),maxarg2=(b),(maxarg1) $>$ (maxarg2) ? (maxarg1) \-: (maxarg2))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\double {\bf lcfiplus\-::golden} (double ax, double bx, double cx, T $\ast$obj, double tol, double \&xmin)
+\item 
+{\footnotesize template$<$class T $>$ }\\double {\bf lcfiplus\-::brent} (double ax, double bx, double cx, T $\ast$obj, double tol, double \&xmin)
+\item 
+{\footnotesize template$<$class T , class U $>$ }\\double {\bf lcfiplus\-::dbrent} (double ax, double bx, double cx, T $\ast$obj, U $\ast$dobj, double tol, double \&xmin)
+\item 
+{\footnotesize template$<$class T $>$ }\\void {\bf lcfiplus\-::lnsrch} (int n, double xold[$\,$], double fold, double g[$\,$], double p[$\,$], double x[$\,$], double $\ast$f, double stpmax, int $\ast$check, T $\ast$obj)
+\item 
+{\footnotesize template$<$class T , class U $>$ }\\void {\bf lcfiplus\-::dfpmin} (double p[$\,$], int n, double gtol, int $\ast$iter, double $\ast$fret, T $\ast$obj, U $\ast$dobj)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double {\bf lcfiplus\-::\-R} =0.\-61803399
+\item 
+const double {\bf lcfiplus\-::\-C} =(1.\-0-\/R)
+\item 
+const double {\bf lcfiplus\-::\-G\-O\-L\-D} =1.\-618034
+\item 
+const double {\bf lcfiplus\-::\-G\-L\-I\-M\-I\-T} =100.\-0
+\item 
+const double {\bf lcfiplus\-::\-T\-I\-N\-Y} =1.e-\/25
+\item 
+const double {\bf lcfiplus\-::\-C\-G\-O\-L\-D} =0.\-3819660
+\item 
+const double {\bf lcfiplus\-::\-Z\-E\-P\-S} = 1e-\/20
+\item 
+const int {\bf lcfiplus\-::\-I\-T\-M\-A\-X} =200
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{algo.\-h@{algo.\-h}!F\-M\-A\-X@{F\-M\-A\-X}}
+\index{F\-M\-A\-X@{F\-M\-A\-X}!algo.h@{algo.\-h}}
+\subsubsection[{F\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-M\-A\-X(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(maxarg1=(a),maxarg2=(b),(maxarg1) $>$ (maxarg2) ? (maxarg1) \-: (maxarg2))}\label{algo_8h_a985ff4ce447bced94342e89ab3766fdd}
+
+
+Referenced by lcfiplus\-::dfpmin(), and lcfiplus\-::lnsrch().
+
+\index{algo.\-h@{algo.\-h}!F\-M\-A\-X@{F\-M\-A\-X}}
+\index{F\-M\-A\-X@{F\-M\-A\-X}!algo.h@{algo.\-h}}
+\subsubsection[{F\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-M\-A\-X(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(maxarg1=(a),maxarg2=(b),(maxarg1) $>$ (maxarg2) ? (maxarg1) \-: (maxarg2))}\label{algo_8h_a985ff4ce447bced94342e89ab3766fdd}
+\index{algo.\-h@{algo.\-h}!M\-O\-V3@{M\-O\-V3}}
+\index{M\-O\-V3@{M\-O\-V3}!algo.h@{algo.\-h}}
+\subsubsection[{M\-O\-V3}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-O\-V3(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~(a)=(d);(b)=(e);(c)=(f);}\label{algo_8h_afa069e7bc1c4fc253e85c69fce265d2b}
+
+
+Referenced by lcfiplus\-::dbrent().
+
+\index{algo.\-h@{algo.\-h}!S\-H\-F\-T@{S\-H\-F\-T}}
+\index{S\-H\-F\-T@{S\-H\-F\-T}!algo.h@{algo.\-h}}
+\subsubsection[{S\-H\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-H\-F\-T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~(a)=(b);(b)=(c);(c)=(d);}\label{algo_8h_a199afb41152cc9a1c32d60f129a40ea5}
+
+
+Referenced by lcfiplus\-::brent(), and lcfiplus\-::mnbrak().
+
+\index{algo.\-h@{algo.\-h}!S\-H\-F\-T2@{S\-H\-F\-T2}}
+\index{S\-H\-F\-T2@{S\-H\-F\-T2}!algo.h@{algo.\-h}}
+\subsubsection[{S\-H\-F\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-H\-F\-T2(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(a)=(b);(b)=(c);}\label{algo_8h_a4a68f16b0ff909c9a2db33ed91c173f3}
+
+
+Referenced by lcfiplus\-::golden().
+
+\index{algo.\-h@{algo.\-h}!S\-H\-F\-T3@{S\-H\-F\-T3}}
+\index{S\-H\-F\-T3@{S\-H\-F\-T3}!algo.h@{algo.\-h}}
+\subsubsection[{S\-H\-F\-T3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-H\-F\-T3(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~(a)=(b);(b)=(c);(c)=(d);}\label{algo_8h_aa2fe0a6eb610d7d50048c62747994d4a}
+
+
+Referenced by lcfiplus\-::golden().
+
+\index{algo.\-h@{algo.\-h}!S\-I\-G\-N@{S\-I\-G\-N}}
+\index{S\-I\-G\-N@{S\-I\-G\-N}!algo.h@{algo.\-h}}
+\subsubsection[{S\-I\-G\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-I\-G\-N(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((b)$>$=0.\-0 ? fabs(a) \-: -\/fabs(a))}\label{algo_8h_ac89d5f8a358eb8a1abdcd0fcef134f1a}
+
+
+Referenced by lcfiplus\-::brent(), lcfiplus\-::dbrent(), and lcfiplus\-::mnbrak().
+

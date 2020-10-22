@@ -1,0 +1,68 @@
+\section{lcfiplus\-:\-:Track\-Selector Class Reference}
+\label{classlcfiplus_1_1TrackSelector}\index{lcfiplus\-::\-Track\-Selector@{lcfiplus\-::\-Track\-Selector}}
+
+
+{\ttfamily \#include $<$Track\-Selector.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ const {\bf Track} $\ast$ $>$ {\bf operator()} (const vector$<$ const {\bf Track} $\ast$ $>$ \&tracks, {\bf Track\-Selector\-Config} \&config, const {\bf Vertex} $\ast$ip=0)
+\item 
+bool {\bf passes\-Cut} (const {\bf Track} $\ast$trk, const {\bf Track\-Selector\-Config} \&cfg, const {\bf Vertex} $\ast$ip=0)
+\item 
+{\bf Track\-Selector} ()
+\item 
+{\bf $\sim$\-Track\-Selector} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{lcfiplus\-::\-Track\-Selector@{lcfiplus\-::\-Track\-Selector}!Track\-Selector@{Track\-Selector}}
+\index{Track\-Selector@{Track\-Selector}!lcfiplus::TrackSelector@{lcfiplus\-::\-Track\-Selector}}
+\subsubsection[{Track\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Track\-Selector\-::\-Track\-Selector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1TrackSelector_abbf95edea7689552204c9a8bf3654459}
+\index{lcfiplus\-::\-Track\-Selector@{lcfiplus\-::\-Track\-Selector}!$\sim$\-Track\-Selector@{$\sim$\-Track\-Selector}}
+\index{$\sim$\-Track\-Selector@{$\sim$\-Track\-Selector}!lcfiplus::TrackSelector@{lcfiplus\-::\-Track\-Selector}}
+\subsubsection[{$\sim$\-Track\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}lcfiplus\-::\-Track\-Selector\-::$\sim$\-Track\-Selector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1TrackSelector_a91dcf5c06016f3a26b2a163d49f89ea4}
+
+
+\subsection{Member Function Documentation}
+\index{lcfiplus\-::\-Track\-Selector@{lcfiplus\-::\-Track\-Selector}!operator()@{operator()}}
+\index{operator()@{operator()}!lcfiplus::TrackSelector@{lcfiplus\-::\-Track\-Selector}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$const {\bf Track}$\ast$$>$ lcfiplus\-::\-Track\-Selector\-::operator() (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ const {\bf Track} $\ast$ $>$ \&}]{tracks, }
+\item[{{\bf Track\-Selector\-Config} \&}]{config, }
+\item[{const {\bf Vertex} $\ast$}]{ip = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1TrackSelector_a4b40b34f4abefe73bee2a2121330146a}
+\index{lcfiplus\-::\-Track\-Selector@{lcfiplus\-::\-Track\-Selector}!passes\-Cut@{passes\-Cut}}
+\index{passes\-Cut@{passes\-Cut}!lcfiplus::TrackSelector@{lcfiplus\-::\-Track\-Selector}}
+\subsubsection[{passes\-Cut}]{\setlength{\rightskip}{0pt plus 5cm}bool lcfiplus\-::\-Track\-Selector\-::passes\-Cut (
+\begin{DoxyParamCaption}
+\item[{const {\bf Track} $\ast$}]{trk, }
+\item[{const {\bf Track\-Selector\-Config} \&}]{cfg, }
+\item[{const {\bf Vertex} $\ast$}]{ip = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classlcfiplus_1_1TrackSelector_a930302ce2032a72546317dd5fa0b01cf}
+
+
+References lcfiplus\-::tpar\-::d0d0, lcfiplus\-::\-Track\-::get\-Cov\-Matrix(), lcfiplus\-::\-Track\-::get\-D0(), lcfiplus\-::\-Track\-::get\-Ftd\-Hits(), lcfiplus\-::\-Track\-::get\-Radius\-Of\-Innermost\-Hit(), lcfiplus\-::\-Track\-::get\-Tpc\-Hits(), lcfiplus\-::\-Track\-::get\-Vtx\-Hits(), lcfiplus\-::\-Track\-::get\-Z0(), lcfiplus\-::\-Track\-Selector\-Config\-::max\-D0, lcfiplus\-::\-Track\-Selector\-Config\-::max\-D0\-Err, lcfiplus\-::\-Track\-Selector\-Config\-::max\-D0\-Sig, lcfiplus\-::\-Track\-Selector\-Config\-::max\-D0\-Z0\-Sig, lcfiplus\-::\-Track\-Selector\-Config\-::max\-Innermost\-Hit\-Radius, lcfiplus\-::\-Track\-Selector\-Config\-::max\-Z0, lcfiplus\-::\-Track\-Selector\-Config\-::max\-Z0\-Err, lcfiplus\-::\-Track\-Selector\-Config\-::max\-Z0\-Sig, lcfiplus\-::\-Track\-Selector\-Config\-::min\-D0, lcfiplus\-::\-Track\-Selector\-Config\-::min\-D0\-Err, lcfiplus\-::\-Track\-Selector\-Config\-::min\-D0\-Sig, lcfiplus\-::\-Track\-Selector\-Config\-::min\-D0\-Z0\-Sig, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Ftd\-Hits, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Pt, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Tpc\-Hits, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Tpc\-Hits\-Min\-Pt, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Vtx\-Hits, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Vtx\-Plus\-Ftd\-Hits, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Z0, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Z0\-Err, lcfiplus\-::\-Track\-Selector\-Config\-::min\-Z0\-Sig, lcfiplus\-::tpar\-::z0, and lcfiplus\-::tpar\-::z0z0.
+
+
+
+Referenced by lcfiplus\-::\-Lcfi\-Interface\-::find\-Secondary\-Vertices().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Track\-Selector.\-h}\end{DoxyCompactItemize}

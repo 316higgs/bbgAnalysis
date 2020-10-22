@@ -1,0 +1,3 @@
+/home/ilc/sedi/Marlin/BBG_Analysis/TestbbgProcessor/lib/libQQbarProcessor.so.0.1.0
+/home/ilc/sedi/Marlin/BBG_Analysis/TestbbgProcessor/lib/libQQbarProcessor.so.0.1
+/home/ilc/sedi/Marlin/BBG_Analysis/TestbbgProcessor/lib/libQQbarProcessor.so
